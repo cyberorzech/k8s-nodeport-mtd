@@ -15,27 +15,30 @@ def app_reconfigurator():
     patch_file_template = config["PATCH_FILE_TEMPLATE"]
     if not isinstance(services_names, list) or len(services_names) < 1:
         raise ValueError(f"Invalid services names in config (either not a list or empty list)")
+    
     k8s = K8s()
     for name in services_names:
         k8s.check_resource_existence(name, "service")
-
+    
+    # Patch services or (TODO) create new services
     legit_service_name = choice(services_names)
-    # zaladuj templatke
     template = load_template(patch_file_template)
-    # dla kazdego servicename:
     for name in services_names:
-        pass
-    # przygotuj templatke
-    # -f apply
-    # print raport
+        if name == legit_service_name:
+            ready_template = template
+            ready_template["spec"]["selector"] = {"app": "legit-app"}
+        else:
+            ready_template = template 
+            ready_template["spec"]["selector"] = {"app": "false-app"}
+        k8s.patch_service(name=name, body=ready_template)
+        logger.info(f"Patched {name}")
+    logger.success(f"All services patched. Legit app is exposed on {legit_service_name} NodePort now")
+    
+    nodeports = list()
+    for name in services_names:
+        nodeports.append(k8s.get_nodeport(name))
+    logger.success(dict(zip(services_names, nodeports)))
 
-
-
-    # pojedyncze przygotowanie
-    template["spec"]["selector"] = {"app": "legit-app"}
-    print("template po poprawce: ")
-    print(template)
-    k8s.patch_service("app-service2", template)
 
 @logger.catch
 def prepare_patch_file(template: dict, service_name: str, id: int):

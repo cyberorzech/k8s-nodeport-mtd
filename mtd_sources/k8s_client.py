@@ -13,12 +13,20 @@ class K8s:
                 f"Arguments must be strings, got {type(resource_name)=} and {type(resource_type)=} instead"
             )
         if resource_type == "pod":
-            self.client.read_namespaced_pod(namespace="default", name=resource_name)
+            res = self.client.read_namespaced_pod(namespace="default", name=resource_name)
         elif resource_type == "service":
-            self.client.read_namespaced_service(namespace="default", name=resource_name)
+            res = self.client.read_namespaced_service(namespace="default", name=resource_name)
         else:
             raise ValueError("This resource is either invalid or not implemented")
         return
+
+    @logger.catch
+    def get_nodeport(self, resource_name: str) -> int:
+        if not isinstance(resource_name, str):
+            raise TypeError(f"Argument must be str, got {type(resource_name)}")
+        res = self.client.read_namespaced_service(namespace='default', name=resource_name)
+        logger.info("This method returns only first node port (assuming only one nodeport)")
+        return res.spec.ports[0].node_port
 
     @logger.catch
     def patch_service(self, name: str, body: dict):
