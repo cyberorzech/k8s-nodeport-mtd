@@ -1,4 +1,3 @@
-import resource
 from loguru import logger
 from kubernetes import client, config
 
