@@ -2,9 +2,6 @@ LOG_FILE: auto
 LOG_LVL: SUCCESS
 LOG_RETENTION: 5d
 
-APP_SELECTORS:
-  legit: legit-app
-  false: false-app
 SERVICES_NAMES: [
   app-service1,
   app-service2,

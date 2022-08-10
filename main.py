@@ -4,6 +4,7 @@ from loguru import logger
 from mtd_sources.config import get_config
 from mtd_sources.logger import initialize
 
+
 def setup():
     # TODO
     # stworz deployment x2
@@ -13,6 +14,7 @@ def setup():
     # wez porty udostepnione
     # sprawdz czy aplikacja jest dostepna
     pass
+
 
 def cleanup(deployments, services):
     # TODO

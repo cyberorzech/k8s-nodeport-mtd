@@ -1,0 +1,315 @@
+[32m2022-08-10 18:15:22.634[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m16[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (544442), thread 'MainThread' (140444855998272):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fbbdc997760>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m16[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1mname[0m[1m,[0m [36m"service"[0m[1m)[0m
+    [36m│   │                        └ [0m[36m[1m'app-service1'[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fbbdb2c9e10>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m19[0m, in [35mcheck_resource_existence[0m
+    [1mself[0m[35m[1m.[0m[1mclient[0m[35m[1m.[0m[1mread_namespaced_service[0m[1m([0m[1mnamespace[0m[35m[1m=[0m[36m"default"[0m[1m,[0m [1mname[0m[35m[1m=[0m[1mresource_name[0m[1m)[0m
+    [36m│    │      │                                                 └ [0m[36m[1m'app-service1'[0m
+    [36m│    │      └ [0m[36m[1m<function CoreV1Api.read_namespaced_service at 0x7fbbdb69af80>[0m
+    [36m│    └ [0m[36m[1m<kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 24931, in read_namespaced_service
+    return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)  # noqa: E501
+           │    │                                      │     │            └ {'_return_http_data_only': True}
+           │    │                                      │     └ 'default'
+           │    │                                      └ 'app-service1'
+           │    └ <function CoreV1Api.read_namespaced_service_with_http_info at 0x7fbbdb69b010>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 25018, in read_namespaced_service_with_http_info
+    return self.api_client.call_api(
+           │    │          └ <function ApiClient.call_api at 0x7fbbdba5ac20>
+           │    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+    return self.__call_api(resource_path, method,
+           │               │              └ 'GET'
+           │               └ '/api/v1/namespaces/{namespace}/services/{name}'
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+    response_data = self.request(
+                    │    └ <function ApiClient.request at 0x7fbbdba5acb0>
+                    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+    return self.rest_client.GET(url,
+           │    │           │   └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service1'
+           │    │           └ <function RESTClientObject.GET at 0x7fbbdba5a200>
+           │    └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+    return self.request("GET", url,
+           │    │              └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service1'
+           │    └ <function RESTClientObject.request at 0x7fbbdba5a170>
+           └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 234, in request
+    raise ApiException(http_resp=r)
+          │                      └ <kubernetes.client.rest.RESTResponse object at 0x7fbbdb2b3b50>
+          └ <class 'kubernetes.client.exceptions.ApiException'>
+
+[31m[1mkubernetes.client.exceptions.ApiException[0m:[1m (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'Audit-Id': '5f9d5dfa-70e2-4c74-8812-1a02e24d4fe3', 'Cache-Control': 'no-cache, private', 'Content-Type': 'application/json', 'X-Kubernetes-Pf-Flowschema-Uid': 'f322088b-bd42-4ca3-a3a4-3cf52f96873f', 'X-Kubernetes-Pf-Prioritylevel-Uid': '7cbbd1c1-f912-46fb-9f9f-e315c16ded72', 'Date': 'Wed, 10 Aug 2022 17:15:22 GMT', 'Content-Length': '200'})
+HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service1\" not found","reason":"NotFound","details":{"name":"app-service1","kind":"services"},"code":404}
+
+[0m
+[32m2022-08-10 18:15:22.657[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m16[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (544442), thread 'MainThread' (140444855998272):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fbbdc997760>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m16[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1mname[0m[1m,[0m [36m"service"[0m[1m)[0m
+    [36m│   │                        └ [0m[36m[1m'app-service2'[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fbbdb2c9e10>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m19[0m, in [35mcheck_resource_existence[0m
+    [1mself[0m[35m[1m.[0m[1mclient[0m[35m[1m.[0m[1mread_namespaced_service[0m[1m([0m[1mnamespace[0m[35m[1m=[0m[36m"default"[0m[1m,[0m [1mname[0m[35m[1m=[0m[1mresource_name[0m[1m)[0m
+    [36m│    │      │                                                 └ [0m[36m[1m'app-service2'[0m
+    [36m│    │      └ [0m[36m[1m<function CoreV1Api.read_namespaced_service at 0x7fbbdb69af80>[0m
+    [36m│    └ [0m[36m[1m<kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 24931, in read_namespaced_service
+    return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)  # noqa: E501
+           │    │                                      │     │            └ {'_return_http_data_only': True}
+           │    │                                      │     └ 'default'
+           │    │                                      └ 'app-service2'
+           │    └ <function CoreV1Api.read_namespaced_service_with_http_info at 0x7fbbdb69b010>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 25018, in read_namespaced_service_with_http_info
+    return self.api_client.call_api(
+           │    │          └ <function ApiClient.call_api at 0x7fbbdba5ac20>
+           │    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+    return self.__call_api(resource_path, method,
+           │               │              └ 'GET'
+           │               └ '/api/v1/namespaces/{namespace}/services/{name}'
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+    response_data = self.request(
+                    │    └ <function ApiClient.request at 0x7fbbdba5acb0>
+                    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+    return self.rest_client.GET(url,
+           │    │           │   └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service2'
+           │    │           └ <function RESTClientObject.GET at 0x7fbbdba5a200>
+           │    └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+    return self.request("GET", url,
+           │    │              └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service2'
+           │    └ <function RESTClientObject.request at 0x7fbbdba5a170>
+           └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 234, in request
+    raise ApiException(http_resp=r)
+          │                      └ <kubernetes.client.rest.RESTResponse object at 0x7fbbdc70c6a0>
+          └ <class 'kubernetes.client.exceptions.ApiException'>
+
+[31m[1mkubernetes.client.exceptions.ApiException[0m:[1m (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'Audit-Id': '6b206062-5ebf-47ca-88cb-8a008d1f89b0', 'Cache-Control': 'no-cache, private', 'Content-Type': 'application/json', 'X-Kubernetes-Pf-Flowschema-Uid': 'f322088b-bd42-4ca3-a3a4-3cf52f96873f', 'X-Kubernetes-Pf-Prioritylevel-Uid': '7cbbd1c1-f912-46fb-9f9f-e315c16ded72', 'Date': 'Wed, 10 Aug 2022 17:15:22 GMT', 'Content-Length': '200'})
+HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service2\" not found","reason":"NotFound","details":{"name":"app-service2","kind":"services"},"code":404}
+
+[0m
+[32m2022-08-10 18:15:22.669[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m16[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (544442), thread 'MainThread' (140444855998272):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fbbdc997760>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m16[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1mname[0m[1m,[0m [36m"service"[0m[1m)[0m
+    [36m│   │                        └ [0m[36m[1m'app-service3'[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fbbdb2c9e10>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m19[0m, in [35mcheck_resource_existence[0m
+    [1mself[0m[35m[1m.[0m[1mclient[0m[35m[1m.[0m[1mread_namespaced_service[0m[1m([0m[1mnamespace[0m[35m[1m=[0m[36m"default"[0m[1m,[0m [1mname[0m[35m[1m=[0m[1mresource_name[0m[1m)[0m
+    [36m│    │      │                                                 └ [0m[36m[1m'app-service3'[0m
+    [36m│    │      └ [0m[36m[1m<function CoreV1Api.read_namespaced_service at 0x7fbbdb69af80>[0m
+    [36m│    └ [0m[36m[1m<kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 24931, in read_namespaced_service
+    return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)  # noqa: E501
+           │    │                                      │     │            └ {'_return_http_data_only': True}
+           │    │                                      │     └ 'default'
+           │    │                                      └ 'app-service3'
+           │    └ <function CoreV1Api.read_namespaced_service_with_http_info at 0x7fbbdb69b010>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 25018, in read_namespaced_service_with_http_info
+    return self.api_client.call_api(
+           │    │          └ <function ApiClient.call_api at 0x7fbbdba5ac20>
+           │    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+    return self.__call_api(resource_path, method,
+           │               │              └ 'GET'
+           │               └ '/api/v1/namespaces/{namespace}/services/{name}'
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+    response_data = self.request(
+                    │    └ <function ApiClient.request at 0x7fbbdba5acb0>
+                    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+    return self.rest_client.GET(url,
+           │    │           │   └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service3'
+           │    │           └ <function RESTClientObject.GET at 0x7fbbdba5a200>
+           │    └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+    return self.request("GET", url,
+           │    │              └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service3'
+           │    └ <function RESTClientObject.request at 0x7fbbdba5a170>
+           └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 234, in request
+    raise ApiException(http_resp=r)
+          │                      └ <kubernetes.client.rest.RESTResponse object at 0x7fbbdc70c6a0>
+          └ <class 'kubernetes.client.exceptions.ApiException'>
+
+[31m[1mkubernetes.client.exceptions.ApiException[0m:[1m (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'Audit-Id': '52c8afcc-3773-43fe-80a3-53e817caf790', 'Cache-Control': 'no-cache, private', 'Content-Type': 'application/json', 'X-Kubernetes-Pf-Flowschema-Uid': 'f322088b-bd42-4ca3-a3a4-3cf52f96873f', 'X-Kubernetes-Pf-Prioritylevel-Uid': '7cbbd1c1-f912-46fb-9f9f-e315c16ded72', 'Date': 'Wed, 10 Aug 2022 17:15:22 GMT', 'Content-Length': '200'})
+HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service3\" not found","reason":"NotFound","details":{"name":"app-service3","kind":"services"},"code":404}
+
+[0m
+[32m2022-08-10 18:15:22.680[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m16[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (544442), thread 'MainThread' (140444855998272):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fbbdc997760>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m16[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1mname[0m[1m,[0m [36m"service"[0m[1m)[0m
+    [36m│   │                        └ [0m[36m[1m'app-service4'[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fbbdb2c9e10>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m19[0m, in [35mcheck_resource_existence[0m
+    [1mself[0m[35m[1m.[0m[1mclient[0m[35m[1m.[0m[1mread_namespaced_service[0m[1m([0m[1mnamespace[0m[35m[1m=[0m[36m"default"[0m[1m,[0m [1mname[0m[35m[1m=[0m[1mresource_name[0m[1m)[0m
+    [36m│    │      │                                                 └ [0m[36m[1m'app-service4'[0m
+    [36m│    │      └ [0m[36m[1m<function CoreV1Api.read_namespaced_service at 0x7fbbdb69af80>[0m
+    [36m│    └ [0m[36m[1m<kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 24931, in read_namespaced_service
+    return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)  # noqa: E501
+           │    │                                      │     │            └ {'_return_http_data_only': True}
+           │    │                                      │     └ 'default'
+           │    │                                      └ 'app-service4'
+           │    └ <function CoreV1Api.read_namespaced_service_with_http_info at 0x7fbbdb69b010>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 25018, in read_namespaced_service_with_http_info
+    return self.api_client.call_api(
+           │    │          └ <function ApiClient.call_api at 0x7fbbdba5ac20>
+           │    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+    return self.__call_api(resource_path, method,
+           │               │              └ 'GET'
+           │               └ '/api/v1/namespaces/{namespace}/services/{name}'
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+    response_data = self.request(
+                    │    └ <function ApiClient.request at 0x7fbbdba5acb0>
+                    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+    return self.rest_client.GET(url,
+           │    │           │   └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service4'
+           │    │           └ <function RESTClientObject.GET at 0x7fbbdba5a200>
+           │    └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+    return self.request("GET", url,
+           │    │              └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service4'
+           │    └ <function RESTClientObject.request at 0x7fbbdba5a170>
+           └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 234, in request
+    raise ApiException(http_resp=r)
+          │                      └ <kubernetes.client.rest.RESTResponse object at 0x7fbbdc70c6a0>
+          └ <class 'kubernetes.client.exceptions.ApiException'>
+
+[31m[1mkubernetes.client.exceptions.ApiException[0m:[1m (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'Audit-Id': '95ac16e9-b9a7-4df0-9ef1-2f9a2df5af14', 'Cache-Control': 'no-cache, private', 'Content-Type': 'application/json', 'X-Kubernetes-Pf-Flowschema-Uid': 'f322088b-bd42-4ca3-a3a4-3cf52f96873f', 'X-Kubernetes-Pf-Prioritylevel-Uid': '7cbbd1c1-f912-46fb-9f9f-e315c16ded72', 'Date': 'Wed, 10 Aug 2022 17:15:22 GMT', 'Content-Length': '200'})
+HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service4\" not found","reason":"NotFound","details":{"name":"app-service4","kind":"services"},"code":404}
+
+[0m
+[32m2022-08-10 18:15:22.689[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m16[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (544442), thread 'MainThread' (140444855998272):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fbbdc997760>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m16[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1mname[0m[1m,[0m [36m"service"[0m[1m)[0m
+    [36m│   │                        └ [0m[36m[1m'app-service5'[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fbbdb2c9e10>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m19[0m, in [35mcheck_resource_existence[0m
+    [1mself[0m[35m[1m.[0m[1mclient[0m[35m[1m.[0m[1mread_namespaced_service[0m[1m([0m[1mnamespace[0m[35m[1m=[0m[36m"default"[0m[1m,[0m [1mname[0m[35m[1m=[0m[1mresource_name[0m[1m)[0m
+    [36m│    │      │                                                 └ [0m[36m[1m'app-service5'[0m
+    [36m│    │      └ [0m[36m[1m<function CoreV1Api.read_namespaced_service at 0x7fbbdb69af80>[0m
+    [36m│    └ [0m[36m[1m<kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fbbdb2b1c60>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 24931, in read_namespaced_service
+    return self.read_namespaced_service_with_http_info(name, namespace, **kwargs)  # noqa: E501
+           │    │                                      │     │            └ {'_return_http_data_only': True}
+           │    │                                      │     └ 'default'
+           │    │                                      └ 'app-service5'
+           │    └ <function CoreV1Api.read_namespaced_service_with_http_info at 0x7fbbdb69b010>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api/core_v1_api.py", line 25018, in read_namespaced_service_with_http_info
+    return self.api_client.call_api(
+           │    │          └ <function ApiClient.call_api at 0x7fbbdba5ac20>
+           │    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+           └ <kubernetes.client.api.core_v1_api.CoreV1Api object at 0x7fbbdb2b1a50>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 348, in call_api
+    return self.__call_api(resource_path, method,
+           │               │              └ 'GET'
+           │               └ '/api/v1/namespaces/{namespace}/services/{name}'
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 180, in __call_api
+    response_data = self.request(
+                    │    └ <function ApiClient.request at 0x7fbbdba5acb0>
+                    └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/api_client.py", line 373, in request
+    return self.rest_client.GET(url,
+           │    │           │   └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service5'
+           │    │           └ <function RESTClientObject.GET at 0x7fbbdba5a200>
+           │    └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+           └ <kubernetes.client.api_client.ApiClient object at 0x7fbbdb2b1de0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 240, in GET
+    return self.request("GET", url,
+           │    │              └ 'https://10.2.255.1:6443/api/v1/namespaces/default/services/app-service5'
+           │    └ <function RESTClientObject.request at 0x7fbbdba5a170>
+           └ <kubernetes.client.rest.RESTClientObject object at 0x7fbbdb2b1cf0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/kubernetes/client/rest.py", line 234, in request
+    raise ApiException(http_resp=r)
+          │                      └ <kubernetes.client.rest.RESTResponse object at 0x7fbbdc70c6a0>
+          └ <class 'kubernetes.client.exceptions.ApiException'>
+
+[31m[1mkubernetes.client.exceptions.ApiException[0m:[1m (404)
+Reason: Not Found
+HTTP response headers: HTTPHeaderDict({'Audit-Id': '94579088-1782-419f-9b71-14c1243c8729', 'Cache-Control': 'no-cache, private', 'Content-Type': 'application/json', 'X-Kubernetes-Pf-Flowschema-Uid': 'f322088b-bd42-4ca3-a3a4-3cf52f96873f', 'X-Kubernetes-Pf-Prioritylevel-Uid': '7cbbd1c1-f912-46fb-9f9f-e315c16ded72', 'Date': 'Wed, 10 Aug 2022 17:15:22 GMT', 'Content-Length': '200'})
+HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service5\" not found","reason":"NotFound","details":{"name":"app-service5","kind":"services"},"code":404}
+
+[0m
