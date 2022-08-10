@@ -1,6 +1,7 @@
 from kubernetes import client, config
 from loguru import logger
 
+from mtd_sources.config import get_config
 from mtd_sources.logger import initialize
 
 def setup():
@@ -37,8 +38,8 @@ def check_cluster_connection():
 
 
 def main():
-    logger.success("jest ok")
-    check_cluster_connection()
+    config = get_config(CONFIG_FILE_PATH)
+    print(config["SERVICES_NAMES"])
 
 
 if __name__ == "__main__":
