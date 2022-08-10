@@ -1,6 +1,6 @@
 spec:
   selector:
-    app: legit-app
+    app: false-app
   ports:
   - protocol: "TCP"
     port: 30001
