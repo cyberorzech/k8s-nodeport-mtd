@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: false-app-service
+spec:
+  selector:
+    app: false-app
+  ports:
+  - protocol: "TCP"
+    port: 30001
+    targetPort: 5000
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: false-app
+spec:
+  selector:
+    matchLabels:
+      app: false-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: false-app
+    spec:
+      containers:
+      - name: false-app
+        image: cyberorzech/repo:false-app
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred

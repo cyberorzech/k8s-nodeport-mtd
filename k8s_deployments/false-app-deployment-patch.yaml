@@ -1,0 +1,9 @@
+spec:
+  selector:
+    app: legit-app
+  ports:
+  - protocol: "TCP"
+    port: 30001
+    targetPort: 5000
+  type: NodePort
+

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: legit-app-service
+spec:
+  selector:
+    app: legit-app
+  ports:
+  - protocol: "TCP"
+    port: 30000
+    targetPort: 5000
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legit-app
+spec:
+  selector:
+    matchLabels:
+      app: legit-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: legit-app
+    spec:
+      containers:
+      - name: legit-app
+        image: cyberorzech/repo:legit-app
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
