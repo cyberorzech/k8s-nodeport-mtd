@@ -313,3 +313,80 @@ HTTP response headers: HTTPHeaderDict({'Audit-Id': '94579088-1782-419f-9b71-14c1
 HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"services \"app-service5\" not found","reason":"NotFound","details":{"name":"app-service5","kind":"services"},"code":404}
 
 [0m
+[32m2022-08-10 19:06:16.373[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m57[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (588605), thread 'MainThread' (139810646832960):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m57[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7f2832c95240>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m15[0m, in [35mapp_reconfigurator[0m
+    [1mpatch_file_template[0m [35m[1m=[0m [1mconfig[0m[1m[[0m[36m"PATH_FILE_TEMPLATE"[0m[1m][0m
+    [36m                      └ [0m[36m[1m{'LOG_FILE': 'auto', 'LOG_LVL': 'SUCCESS', 'LOG_RETENTION': '5d', 'SERVICES_NAMES': ['app-service1', 'app-service2', 'app-ser...[0m
+
+[31m[1mKeyError[0m:[1m 'PATH_FILE_TEMPLATE'[0m
+[32m2022-08-10 19:07:03.880[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m57[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (589280), thread 'MainThread' (140677750511424):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m57[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7ff216319240>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m22[0m, in [35mapp_reconfigurator[0m
+    [1mlegit_service_name[0m [35m[1m=[0m [1mservices_names[0m[1m[[0m[1mchoice[0m[1m([0m[1mservices_names[0m[1m)[0m[1m][0m
+    [36m                     │              │      └ [0m[36m[1m['app-service1', 'app-service2', 'app-service3', 'app-service4', 'app-service5'][0m
+    [36m                     │              └ [0m[36m[1m<bound method Random.choice of <random.Random object at 0x55a2cc42ab40>>[0m
+    [36m                     └ [0m[36m[1m['app-service1', 'app-service2', 'app-service3', 'app-service4', 'app-service5'][0m
+
+[31m[1mTypeError[0m:[1m list indices must be integers or slices, not str[0m
+[32m2022-08-10 19:07:40.803[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m24[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (589812), thread 'MainThread' (139727439087424):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m57[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7f14d3379240>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m24[0m, in [35mapp_reconfigurator[0m
+    [1mtemplate[0m [35m[1m=[0m [1mload_template[0m[1m([0m[1mpatch_file_template[0m[1m)[0m
+    [36m           │             └ [0m[36m[1m'k8s_deployments/patch-template.yaml'[0m
+    [36m           └ [0m[36m[1m<function load_template at 0x7f14d1e4f400>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m47[0m, in [35mload_template[0m
+    [35m[1mwith[0m [1mopen[0m[1m([0m[1mpath[0m[35m[1m.[0m[1mjoin[0m[1m([0m[1mpath[0m[35m[1m.[0m[1mdirname[0m[1m([0m[1m__file__[0m[1m)[0m[1m,[0m [1mtemplate_path[0m[1m)[0m[1m)[0m [35m[1mas[0m [1mf[0m[1m:[0m
+    [36m          │    │    │    │       │          └ [0m[36m[1m'k8s_deployments/patch-template.yaml'[0m
+    [36m          │    │    │    │       └ [0m[36m[1m'/home/gr/k8s-nodeport-mtd/app_reconfigurator.py'[0m
+    [36m          │    │    │    └ [0m[36m[1m<function dirname at 0x7f14d41228c0>[0m
+    [36m          │    │    └ [0m[36m[1m<module 'posixpath' from '/usr/lib/python3.10/posixpath.py'>[0m
+    [36m          │    └ [0m[36m[1m<function join at 0x7f14d41225f0>[0m
+    [36m          └ [0m[36m[1m<module 'posixpath' from '/usr/lib/python3.10/posixpath.py'>[0m
+
+[31m[1mFileNotFoundError[0m:[1m [Errno 2] No such file or directory: '/home/gr/k8s-nodeport-mtd/k8s_deployments/patch-template.yaml'[0m
+[32m2022-08-10 19:07:40.815[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m57[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (589812), thread 'MainThread' (139727439087424):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m57[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7f14d3379240>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m35[0m, in [35mapp_reconfigurator[0m
+    [1mtemplate[0m[1m[[0m[36m"spec"[0m[1m][0m[1m[[0m[36m"selector"[0m[1m][0m [35m[1m=[0m [1m{[0m[36m"app"[0m[1m:[0m [36m"legit-app"[0m[1m}[0m
+    [36m└ [0m[36m[1mNone[0m
+
+[31m[1mTypeError[0m:[1m 'NoneType' object is not subscriptable[0m
+[32m2022-08-10 19:09:04.490[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m38[0m - [31m[1mAn error has been caught in function 'app_reconfigurator', process 'MainProcess' (591031), thread 'MainThread' (140584432293696):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m59[0m, in [35m<module>[0m
+    [1mapp_reconfigurator[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function app_reconfigurator at 0x7fdc5bfe9240>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mapp_reconfigurator.py[0m", line [33m38[0m, in [35mapp_reconfigurator[0m
+    [1mk8s[0m[35m[1m.[0m[1mpatch_service[0m[1m([0m[36m"app-service2"[0m[1m,[0m [1mtemplate[0m[1m)[0m
+    [36m│   │                             └ [0m[36m[1m{'spec': {'selector': {'app': 'legit-app'}, 'ports': [{'protocol': 'TCP', 'port': 30001, 'targetPort': 5000}], 'type': 'NodeP...[0m
+    [36m│   └ [0m[36m[1m<function K8s.patch_service at 0x7fdc5aaba7a0>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fdc5c2d7640>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mk8s_client.py[0m", line [33m26[0m, in [35mpatch_service[0m
+    [35m[1mraise[0m [1mTypeError[0m[1m([0m[36mf"Arguments must be strings, got {type(name)=} and {type(body)=}"[0m[1m)[0m
+
+[31m[1mTypeError[0m:[1m Arguments must be strings, got type(name)=<class 'str'> and type(body)=<class 'dict'>[0m

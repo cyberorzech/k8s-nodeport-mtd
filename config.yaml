@@ -9,4 +9,4 @@ SERVICES_NAMES: [
   app-service4,
   app-service5
 ]
-PATCH_FILE_TEMPLATE: "k8s_deployments/patch-template.yaml"
+PATCH_FILE_TEMPLATE: "k8s_deployments/nodeport-service-patch-template.yaml"

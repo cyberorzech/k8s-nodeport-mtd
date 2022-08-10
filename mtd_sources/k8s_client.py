@@ -10,7 +10,7 @@ class K8s:
     def check_resource_existence(self, resource_name: str, resource_type: str) -> bool:
         if not isinstance(resource_name, str) or not isinstance(resource_type, str):
             raise TypeError(
-                f"Arguments must be strings, got {type(resource_name)} and {type(resource_type)} instead"
+                f"Arguments must be strings, got {type(resource_name)=} and {type(resource_type)=} instead"
             )
         if resource_type == "pod":
             self.client.read_namespaced_pod(namespace="default", name=resource_name)
@@ -19,6 +19,12 @@ class K8s:
         else:
             raise ValueError("This resource is either invalid or not implemented")
         return
+
+    @logger.catch
+    def patch_service(self, name: str, body: dict):
+        if not isinstance(name, str) or not isinstance(body, dict):
+            raise TypeError(f"Arguments must be string and dict, got {type(name)=} and {type(body)=}")
+        self.client.patch_namespaced_service(name=name, namespace='default', body=body)
 
     @logger.catch
     def __check_cluster_connection(self):
