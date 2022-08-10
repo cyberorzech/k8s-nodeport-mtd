@@ -2,13 +2,15 @@ from random import choice
 from loguru import logger
 from yaml import safe_load
 from os import path
+from flask import Flask
 
 from mtd_sources.config import get_config
 from mtd_sources.logger import initialize
 from mtd_sources.k8s_client import K8s
 
+app = Flask(__name__)
 
-@logger.catch
+@app.route("/")
 def app_reconfigurator():
     config = get_config(CONFIG_FILE_PATH)
     services_names = config["SERVICES_NAMES"]
@@ -38,11 +40,7 @@ def app_reconfigurator():
     for name in services_names:
         nodeports.append(k8s.get_nodeport(name))
     logger.success(dict(zip(services_names, nodeports)))
-
-
-@logger.catch
-def prepare_patch_file(template: dict, service_name: str, id: int):
-    pass
+    return "ok"
 
 
 @logger.catch
@@ -59,4 +57,4 @@ def load_template(template_path: str):
 if __name__ == "__main__":
     CONFIG_FILE_PATH = "./config.yaml"
     initialize(CONFIG_FILE_PATH)
-    app_reconfigurator()
+    app.run(host="0.0.0.0", port=5100)
