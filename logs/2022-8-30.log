@@ -1,0 +1,10 @@
+[32m2022-08-30 14:28:32.677[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-08-30 14:28:32.707[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:28:43.255[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-08-30 14:28:43.297[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:47:32.577[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-08-30 14:47:32.620[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:49:08.363[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-08-30 14:49:08.402[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:49:21.053[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-08-30 14:49:21.087[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m

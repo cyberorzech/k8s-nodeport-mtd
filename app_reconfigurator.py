@@ -10,8 +10,8 @@ from mtd_sources.k8s_client import K8s
 
 app = Flask(__name__)
 
-@app.route("/")
-def app_reconfigurator():
+@app.route("/update")
+def update():
     config = get_config(CONFIG_FILE_PATH)
     services_names = config["SERVICES_NAMES"]
     patch_file_template = config["PATCH_FILE_TEMPLATE"]
@@ -39,8 +39,13 @@ def app_reconfigurator():
     nodeports = list()
     for name in services_names:
         nodeports.append(k8s.get_nodeport(name))
-    logger.success(dict(zip(services_names, nodeports)))
-    return "ok"
+    report = dict(zip(services_names, nodeports))
+    logger.success(report)
+    return {
+        "legit_service": legit_service_name,
+        "legit_service_port": report[legit_service_name],
+        "service_report": report
+    }
 
 
 @logger.catch

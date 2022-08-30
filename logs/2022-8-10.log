@@ -6419,3 +6419,154 @@ HTTP response body: {"kind":"Status","apiVersion":"v1","metadata":{},"status":"F
 [32m2022-08-10 21:37:57.782[0m | [31m[1mERROR   [0m | [36mmtd_sources.state[0m:[36mget[0m:[36m46[0m - [31m[1m400 Bad Request: The browser (or proxy) sent a request that this server could not understand.[0m
 [32m2022-08-10 21:38:20.969[0m | [31m[1mERROR   [0m | [36mmtd_sources.state[0m:[36mget[0m:[36m46[0m - [31m[1m400 Bad Request: The browser (or proxy) sent a request that this server could not understand.[0m
 [32m2022-08-10 21:43:08.745[0m | [31m[1mERROR   [0m | [36mmtd_sources.state[0m:[36mget[0m:[36m46[0m - [31m[1m400 Bad Request: The browser (or proxy) sent a request that this server could not understand.[0m
+[32m2022-08-10 22:01:52.783[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-08-10 22:01:52.824[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mapp_reconfigurator[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-10 22:16:24.477[0m | [31m[1mERROR   [0m | [36mmtd_sources.search[0m:[36mget[0m:[36m27[0m - [31m[1m400 Bad Request: The browser (or proxy) sent a request that this server could not understand.[0m
+[32m2022-08-10 22:20:50.664[0m | [31m[1mERROR   [0m | [36mflask_restful[0m:[36mdispatch_request[0m:[36m582[0m - [31m[1mAn error has been caught in function 'dispatch_request', process 'MainProcess' (757152), thread 'Thread-1 (process_request_thread)' (140428455720512):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/wrappers.py", line 128, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/wrappers/request.py", line 611, in on_json_loading_failed
+    raise BadRequest(
+          └ <class 'werkzeug.exceptions.BadRequest'>
+
+[31m[1mwerkzeug.exceptions.BadRequest[0m:[1m 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.[0m
+
+
+[1mThe above exception was the direct cause of the following exception:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/usr/lib/python3.10/threading.py", line 973, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fb80dabc820>
+    └ <Thread(Thread-1 (process_request_thread), started daemon 140428455720512)>
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fb80dabc550>
+    └ <Thread(Thread-1 (process_request_thread), started daemon 140428455720512)>
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(Thread-1 (process_request_thread), started daemon 140428455720512)>
+    │    │        │    └ (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5000), raddr=('...
+    │    │        └ <Thread(Thread-1 (process_request_thread), started daemon 140428455720512)>
+    │    └ <bound method ThreadingMixIn.process_request_thread of <werkzeug.serving.ThreadedWSGIServer object at 0x7fb80c3a23b0>>
+    └ <Thread(Thread-1 (process_request_thread), started daemon 140428455720512)>
+  File "/usr/lib/python3.10/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+    │    │              │        └ ('127.0.0.1', 59156)
+    │    │              └ <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5000), raddr=('1...
+    │    └ <function BaseServer.finish_request at 0x7fb80ccea170>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x7fb80c3a23b0>
+  File "/usr/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    │    │                   │        │               └ <werkzeug.serving.ThreadedWSGIServer object at 0x7fb80c3a23b0>
+    │    │                   │        └ ('127.0.0.1', 59156)
+    │    │                   └ <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 5000), raddr=('1...
+    │    └ <class 'werkzeug.serving.WSGIRequestHandler'>
+    └ <werkzeug.serving.ThreadedWSGIServer object at 0x7fb80c3a23b0>
+  File "/usr/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+    │    └ <function WSGIRequestHandler.handle at 0x7fb80cc24af0>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x7fb80c3a27d0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/serving.py", line 363, in handle
+    super().handle()
+  File "/usr/lib/python3.10/http/server.py", line 425, in handle
+    self.handle_one_request()
+    │    └ <function BaseHTTPRequestHandler.handle_one_request at 0x7fb80cbde830>
+    └ <werkzeug.serving.WSGIRequestHandler object at 0x7fb80c3a27d0>
+  File "/usr/lib/python3.10/http/server.py", line 413, in handle_one_request
+    method()
+    └ <bound method WSGIRequestHandler.run_wsgi of <werkzeug.serving.WSGIRequestHandler object at 0x7fb80c3a27d0>>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+    │       │    │      └ <Flask 'state_repository'>
+    │       │    └ <werkzeug.serving.ThreadedWSGIServer object at 0x7fb80c3a23b0>
+    │       └ <werkzeug.serving.WSGIRequestHandler object at 0x7fb80c3a27d0>
+    └ <function WSGIRequestHandler.run_wsgi.<locals>.execute at 0x7fb80c3b64d0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+                       │   │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x7fb80c3b6320>
+                       │   └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=5>, 'wsgi.errors': <_io.TextIOWrap...
+                       └ <Flask 'state_repository'>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/app.py", line 2486, in __call__
+    return self.wsgi_app(environ, start_response)
+           │    │        │        └ <function WSGIRequestHandler.run_wsgi.<locals>.start_response at 0x7fb80c3b6320>
+           │    │        └ {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=5>, 'wsgi.errors': <_io.TextIOWrap...
+           │    └ <function Flask.wsgi_app at 0x7fb80c969b40>
+           └ <Flask 'state_repository'>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+               │    └ <function Flask.full_dispatch_request at 0x7fb80c969000>
+               └ <Flask 'state_repository'>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/app.py", line 1758, in full_dispatch_request
+    rv = self.dispatch_request()
+         │    └ <function Flask.dispatch_request at 0x7fb80c968f70>
+         └ <Flask 'state_repository'>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/app.py", line 1734, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           │    │           │    │              │    │            └ {}
+           │    │           │    │              │    └ 'state'
+           │    │           │    │              └ <Rule '/state' (OPTIONS, GET, HEAD) -> state>
+           │    │           │    └ {'static': <function Flask.__init__.<locals>.<lambda> at 0x7fb80c7ff490>, 'state': <function View.as_view.<locals>.view at 0x...
+           │    │           └ <Flask 'state_repository'>
+           │    └ <function Flask.ensure_sync at 0x7fb80c9692d0>
+           └ <Flask 'state_repository'>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask_restful/__init__.py", line 467, in wrapper
+    resp = resource(*args, **kwargs)
+           │         │       └ {}
+           │         └ ()
+           └ <function View.as_view.<locals>.view at 0x7fb80c3b5fc0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+           │                       │    │                   └ {}
+           │                       │    └ <function Resource.dispatch_request at 0x7fb80c98cd30>
+           │                       └ <mtd_sources.state.State object at 0x7fb80c3a2cb0>
+           └ <Flask 'state_repository'>
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask_restful/__init__.py", line 582, in dispatch_request
+    resp = meth(*args, **kwargs)
+           │     │       └ {}
+           │     └ ()
+           └ <bound method State.get of <mtd_sources.state.State object at 0x7fb80c3a2cb0>>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mstate.py[0m", line [33m12[0m, in [35mget[0m
+    [1margs[0m [35m[1m=[0m [1mcls[0m[35m[1m.[0m[1m__get_args[0m[1m([0m[1m)[0m
+    [36m       └ [0m[36m[1m<mtd_sources.state.State object at 0x7fb80c3a2cb0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/mtd_sources/[0m[32m[1mstate.py[0m", line [33m34[0m, in [35m__get_args[0m
+    [1margs[0m [35m[1m=[0m [1mparser[0m[35m[1m.[0m[1mparse_args[0m[1m([0m[1m)[0m
+    [36m       │      └ [0m[36m[1m<function RequestParser.parse_args at 0x7fb80c819bd0>[0m
+    [36m       └ [0m[36m[1m<flask_restful.reqparse.RequestParser object at 0x7fb80c3a2e90>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask_restful/reqparse.py", line 328, in parse_args
+    value, found = arg.parse(req, self.bundle_errors)
+                   │   │     │    │    └ False
+                   │   │     │    └ <flask_restful.reqparse.RequestParser object at 0x7fb80c3a2e90>
+                   │   │     └ <Request 'http://localhost:5000/state?id=1&os=2&vendor=3&model=4&start_date=5&end_date=6' [GET]>
+                   │   └ <function Argument.parse at 0x7fb80c819a20>
+                   └ Argument('id', default=None, dest=None, required=False, ignore=False, location=('json', 'values'), type="<function <lambda> a...
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask_restful/reqparse.py", line 184, in parse
+    source = self.source(request)
+             │    │      └ <Request 'http://localhost:5000/state?id=1&os=2&vendor=3&model=4&start_date=5&end_date=6' [GET]>
+             │    └ <function Argument.source at 0x7fb80c819870>
+             └ Argument('id', default=None, dest=None, required=False, ignore=False, location=('json', 'values'), type="<function <lambda> a...
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask_restful/reqparse.py", line 125, in source
+    value = getattr(request, l, None)
+                    │        └ 'json'
+                    └ <Request 'http://localhost:5000/state?id=1&os=2&vendor=3&model=4&start_date=5&end_date=6' [GET]>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/wrappers/request.py", line 540, in json
+    return self.get_json()
+           │    └ <function Request.get_json at 0x7fb80cb539a0>
+           └ <Request 'http://localhost:5000/state?id=1&os=2&vendor=3&model=4&start_date=5&end_date=6' [GET]>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/werkzeug/wrappers/request.py", line 571, in get_json
+    return self.on_json_loading_failed(None)
+           │    └ <function Request.on_json_loading_failed at 0x7fb80c946b00>
+           └ <Request 'http://localhost:5000/state?id=1&os=2&vendor=3&model=4&start_date=5&end_date=6' [GET]>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/flask/wrappers.py", line 133, in on_json_loading_failed
+    raise BadRequest() from e
+          └ <class 'werkzeug.exceptions.BadRequest'>
+
+[31m[1mwerkzeug.exceptions.BadRequest[0m:[1m 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.[0m
