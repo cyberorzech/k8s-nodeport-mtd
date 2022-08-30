@@ -1,6 +1,8 @@
 from loguru import logger
 from flask_restful import Resource, reqparse
-#from requests import get
+from json import load
+
+STATE_PATH = "./state.json"
 
 class State(Resource):
     def __init__(cls) -> None:
@@ -10,27 +12,18 @@ class State(Resource):
     @logger.catch
     def get(cls):
         args = cls.__get_args()
-
-        return dict(args), 200
-
-    @logger.catch
-    def __update(cls):
-        res = get("localhost:5100")
-        cls.state = res.json
-
-    @logger.catch
-    def __print(cls):
-        raise NotImplementedError()
-
+        with open(STATE_PATH) as f:
+            state = load(f)
+        try:
+            service_port = state[f"{args.service_name}_port"]
+        except KeyError:
+            logger.warning(f"Unknown service {args.service_name}")
+            return None, 204
+        return service_port, 200
 
     def __get_args(cls):
         parser = reqparse.RequestParser()
-        parser.add_argument("id")
-        parser.add_argument("os")
-        parser.add_argument("vendor")
-        parser.add_argument("model")
-        parser.add_argument("start_date")
-        parser.add_argument("end_date")
+        parser.add_argument("service_name")
         args = parser.parse_args()
         return args
 

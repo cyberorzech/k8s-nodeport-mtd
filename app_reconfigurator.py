@@ -42,9 +42,9 @@ def update():
     report = dict(zip(services_names, nodeports))
     logger.success(report)
     return {
-        "legit_service": legit_service_name,
-        "legit_service_port": report[legit_service_name],
-        "service_report": report
+        "legit_app": legit_service_name,
+        "legit_app_port": report[legit_service_name],
+        "services_report": report
     }
 
 

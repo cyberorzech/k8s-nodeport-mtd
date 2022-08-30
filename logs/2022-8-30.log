@@ -173,3 +173,6 @@
 [32m2022-08-30 15:00:54.819[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
 [32m2022-08-30 15:00:54.851[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
 [32m2022-08-30 15:00:54.855[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 19:59:49.834[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-08-30 19:59:49.876[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 19:59:49.881[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
