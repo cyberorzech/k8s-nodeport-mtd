@@ -8,3 +8,168 @@
 [32m2022-08-30 14:49:08.402[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
 [32m2022-08-30 14:49:21.053[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
 [32m2022-08-30 14:49:21.087[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:57:48.164[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m23[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (3736138), thread 'MainThread' (140257302701888):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m23[0m, in [35m<module>[0m
+    [1mupdate_state[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function update_state at 0x7f90315fe320>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m15[0m, in [35mupdate_state[0m
+    [1mresponse[0m [35m[1m=[0m [1mget[0m[1m([0m[1mAPP_RECONFIGURATOR_URL[0m[1m)[0m
+    [36m           │   └ [0m[36m[1m'localhost:5100/update'[0m
+    [36m           └ [0m[36m[1m<function get at 0x7f903178be20>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           │              │           │         └ {}
+           │              │           └ None
+           │              └ 'localhost:5100/update'
+           └ <function request at 0x7f9031762290>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None}
+           │       │              │           └ 'localhost:5100/update'
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x7f903178b5b0>
+           └ <requests.sessions.Session object at 0x7f90315f1ff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': None, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [GET]>
+           │    └ <function Session.send at 0x7f903178ba30>
+           └ <requests.sessions.Session object at 0x7f90315f1ff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+              │    │               │       └ 'localhost:5100/update'
+              │    │               └ <PreparedRequest [GET]>
+              │    └ <function Session.get_adapter at 0x7f903178bb50>
+              └ <requests.sessions.Session object at 0x7f90315f1ff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+          └ <class 'requests.exceptions.InvalidSchema'>
+
+[31m[1mrequests.exceptions.InvalidSchema[0m:[1m No connection adapters were found for 'localhost:5100/update'[0m
+[32m2022-08-30 14:58:09.339[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m23[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (3736439), thread 'MainThread' (140353779648320):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m23[0m, in [35m<module>[0m
+    [1mupdate_state[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function update_state at 0x7fa6a7d8a320>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m15[0m, in [35mupdate_state[0m
+    [1mresponse[0m [35m[1m=[0m [1mget[0m[1m([0m[1mAPP_RECONFIGURATOR_URL[0m[1m)[0m
+    [36m           │   └ [0m[36m[1m'localhost:5100/update'[0m
+    [36m           └ [0m[36m[1m<function get at 0x7fa6a7f17e20>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           │              │           │         └ {}
+           │              │           └ None
+           │              └ 'localhost:5100/update'
+           └ <function request at 0x7fa6a7eee290>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None}
+           │       │              │           └ 'localhost:5100/update'
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x7fa6a7f175b0>
+           └ <requests.sessions.Session object at 0x7fa6a7d7dff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': None, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [GET]>
+           │    └ <function Session.send at 0x7fa6a7f17a30>
+           └ <requests.sessions.Session object at 0x7fa6a7d7dff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 695, in send
+    adapter = self.get_adapter(url=request.url)
+              │    │               │       └ 'localhost:5100/update'
+              │    │               └ <PreparedRequest [GET]>
+              │    └ <function Session.get_adapter at 0x7fa6a7f17b50>
+              └ <requests.sessions.Session object at 0x7fa6a7d7dff0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 792, in get_adapter
+    raise InvalidSchema(f"No connection adapters were found for {url!r}")
+          └ <class 'requests.exceptions.InvalidSchema'>
+
+[31m[1mrequests.exceptions.InvalidSchema[0m:[1m No connection adapters were found for 'localhost:5100/update'[0m
+[32m2022-08-30 14:59:05.522[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-08-30 14:59:05.549[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:09.182[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-08-30 14:59:09.227[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:09.231[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m23[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (3737315), thread 'MainThread' (140335458920256):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m23[0m, in [35m<module>[0m
+    [1mupdate_state[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function update_state at 0x7fa263d92320>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m17[0m, in [35mupdate_state[0m
+    [1mdump[0m[1m([0m[1mresponse[0m[1m,[0m [1mf[0m[1m)[0m
+    [36m│    │         └ [0m[36m[1m<_io.TextIOWrapper name='./state.json' mode='w' encoding='UTF-8'>[0m
+    [36m│    └ [0m[36m[1m<Response [200]>[0m
+    [36m└ [0m[36m[1m<function dump at 0x7fa2643183a0>[0m
+
+  File "/usr/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 └ <generator object _make_iterencode.<locals>._iterencode at 0x7fa263dd00b0>
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+        │        └ <Response [200]>
+        └ <bound method JSONEncoder.default of <json.encoder.JSONEncoder object at 0x7fa26431c5e0>>
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+
+[31m[1mTypeError[0m:[1m Object of type Response is not JSON serializable[0m
+[32m2022-08-30 14:59:23.786[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-08-30 14:59:23.817[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:23.820[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m23[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (3737551), thread 'MainThread' (140238931695424):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m23[0m, in [35m<module>[0m
+    [1mupdate_state[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function update_state at 0x7f8bea5fa320>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m17[0m, in [35mupdate_state[0m
+    [1mdump[0m[1m([0m[1mresponse[0m[35m[1m.[0m[1mjson[0m[1m,[0m [1mf[0m[1m)[0m
+    [36m│    │        │     └ [0m[36m[1m<_io.TextIOWrapper name='./state.json' mode='w' encoding='UTF-8'>[0m
+    [36m│    │        └ [0m[36m[1m<function Response.json at 0x7f8bea78a290>[0m
+    [36m│    └ [0m[36m[1m<Response [200]>[0m
+    [36m└ [0m[36m[1m<function dump at 0x7f8beab903a0>[0m
+
+  File "/usr/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 └ <generator object _make_iterencode.<locals>._iterencode at 0x7f8bea783f40>
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+        │        └ <bound method Response.json of <Response [200]>>
+        └ <bound method JSONEncoder.default of <json.encoder.JSONEncoder object at 0x7f8beab94610>>
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+
+[31m[1mTypeError[0m:[1m Object of type method is not JSON serializable[0m
+[32m2022-08-30 14:59:30.624[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-08-30 14:59:30.653[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:43.446[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-08-30 14:59:43.481[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:43.484[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 14:59:53.639[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-08-30 14:59:53.675[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 14:59:53.679[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:03.826[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-08-30 15:00:03.868[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:03.874[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:14.024[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-08-30 15:00:14.064[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:14.070[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:24.216[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-08-30 15:00:24.255[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:24.262[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:34.427[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-08-30 15:00:34.459[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:34.462[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:44.621[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-08-30 15:00:44.667[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:44.672[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 15:00:54.819[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-08-30 15:00:54.851[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 15:00:54.855[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
