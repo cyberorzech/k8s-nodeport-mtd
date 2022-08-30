@@ -1,7 +1,10 @@
+# logs
 LOG_FILE: auto
 LOG_LVL: SUCCESS
 LOG_RETENTION: 5d
 
+# k8s
+MASTER_NODE_IP: "10.2.255.1"
 SERVICES_NAMES: [
   app-service1,
   app-service2,
@@ -10,3 +13,14 @@ SERVICES_NAMES: [
   app-service5
 ]
 PATCH_FILE_TEMPLATE: "k8s_deployments/nodeport-service-patch-template.yaml"
+
+# state repository
+STATE_PATH: "./state.json"
+STATE_REPOSITORY_URL: "http://localhost:5000/state"
+STATE_UPDATE_INTERVAL: 60
+
+# app reconfigurator
+APP_RECONFIGURATOR_URL: "http://localhost:5100/update"
+
+# user
+USER_INTERVAL: 2

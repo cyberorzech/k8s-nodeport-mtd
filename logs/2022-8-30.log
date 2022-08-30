@@ -176,3 +176,159 @@
 [32m2022-08-30 19:59:49.834[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
 [32m2022-08-30 19:59:49.876[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
 [32m2022-08-30 19:59:49.881[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m18[0m - [32m[1mState updated[0m
+[32m2022-08-30 23:11:43.387[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m29[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (4109718), thread 'MainThread' (140549120628544):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           │          └ <function create_connection at 0x7fd42348c4c0>
+           └ <module 'urllib3.util.connection' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection....
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+          └ ConnectionRefusedError(111, 'Connection refused')
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+    │            └ ('127.0.0.1', 5100)
+    └ None
+
+[31m[1mConnectionRefusedError[0m:[1m [Errno 111] Connection refused[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       │    └ <function HTTPConnectionPool._make_request at 0x7fd4233160e0>
+                       └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fd42311da20>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+    │    │       │       │      └ {'body': None, 'headers': {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Conn...
+    │    │       │       └ '/update'
+    │    │       └ 'GET'
+    │    └ <function HTTPConnection.request at 0x7fd4234f0c10>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+          │               │             │       │         │             └ {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+          │               │             │       │         └ None
+          │               │             │       └ '/update'
+          │               │             └ 'GET'
+          │               └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+          └ <class 'urllib3.connection.HTTPConnection'>
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    │    │             │       │    │     │        └ False
+    │    │             │       │    │     └ {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+    │    │             │       │    └ None
+    │    │             │       └ '/update'
+    │    │             └ 'GET'
+    │    └ <function HTTPConnection._send_request at 0x7fd423475bd0>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    │    │          │                    └ False
+    │    │          └ None
+    │    └ <function HTTPConnection.endheaders at 0x7fd423475ab0>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7fd4234756c0>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+    │    │    └ b'GET /update HTTP/1.1\r\nHost: localhost:5100\r\nUser-Agent: python-requests/2.28.1\r\nAccept-Encoding: gzip, deflate\r\nAcc...
+    │    └ <function HTTPConnection.send at 0x7fd423475510>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7fd4234f0a60>
+    └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           │    └ <function HTTPConnection._new_conn at 0x7fd4234f08b0>
+           └ <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+[31m[1murllib3.exceptions.NewConnectionError[0m:[1m <urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>: Failed to establish a new connection: [Errno 111] Connection refused[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7fd423316320>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fd42311da20>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7fd42348e170>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+          │             │      │    │        │             └ 'unknown'
+          │             │      │    │        └ <class 'urllib3.exceptions.ResponseError'>
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>: Failed to establish a new connection: [Errn...
+          │             │      └ '/update'
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7fd42311da20>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+[31m[1murllib3.exceptions.MaxRetryError[0m:[1m HTTPConnectionPool(host='localhost', port=5100): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>: Failed to establish a new connection: [Errno 111] Connection refused'))[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m29[0m, in [35m<module>[0m
+    [1mupdate_state[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function update_state at 0x7fd4231323b0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mupdate_state.py[0m", line [33m21[0m, in [35mupdate_state[0m
+    [1mresponse[0m [35m[1m=[0m [1mget[0m[1m([0m[1mAPP_RECONFIGURATOR_URL[0m[1m)[0m
+    [36m           │   └ [0m[36m[1m'http://localhost:5100/update'[0m
+    [36m           └ [0m[36m[1m<function get at 0x7fd4232c7eb0>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           │              │           │         └ {}
+           │              │           └ None
+           │              └ 'http://localhost:5100/update'
+           └ <function request at 0x7fd42328e320>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None}
+           │       │              │           └ 'http://localhost:5100/update'
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x7fd4232c7640>
+           └ <requests.sessions.Session object at 0x7fd42311db70>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': None, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [GET]>
+           │    └ <function Session.send at 0x7fd4232c7ac0>
+           └ <requests.sessions.Session object at 0x7fd42311db70>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': None, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [GET]>
+        │       └ <function HTTPAdapter.send at 0x7fd4232c6f80>
+        └ <requests.adapters.HTTPAdapter object at 0x7fd42311d810>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [GET]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+[31m[1mrequests.exceptions.ConnectionError[0m:[1m HTTPConnectionPool(host='localhost', port=5100): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd42311eaa0>: Failed to establish a new connection: [Errno 111] Connection refused'))[0m
+[32m2022-08-30 23:12:18.497[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m37[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-08-30 23:12:18.533[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m43[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-08-30 23:12:18.538[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m24[0m - [32m[1mState updated[0m

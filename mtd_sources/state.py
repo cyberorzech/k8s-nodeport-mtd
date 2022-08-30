@@ -2,7 +2,9 @@ from loguru import logger
 from flask_restful import Resource, reqparse
 from json import load
 
-STATE_PATH = "./state.json"
+from mtd_sources.config import get_config
+
+CONFIG_PATH = "./config.yaml"
 
 class State(Resource):
     def __init__(cls) -> None:
@@ -12,6 +14,7 @@ class State(Resource):
     @logger.catch
     def get(cls):
         args = cls.__get_args()
+        STATE_PATH = get_config(CONFIG_PATH)["STATE_PATH"]
         with open(STATE_PATH) as f:
             state = load(f)
         try:
@@ -30,7 +33,3 @@ class State(Resource):
 
 if __name__ == "__main__":
     raise NotImplementedError("Use as class")
-
-
-
-

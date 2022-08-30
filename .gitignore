@@ -1,2 +1,4 @@
 .venv/
 docker_pass.txt
+.vscode/
+austin.py
