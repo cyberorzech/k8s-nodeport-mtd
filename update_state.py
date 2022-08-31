@@ -24,6 +24,8 @@ def update_state():
         logger.success("State updated")
         sleep(INTERVAL)
 
+
+
 if __name__ == "__main__":
     initialize("./config.yaml")
     update_state()

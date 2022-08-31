@@ -1,0 +1,52 @@
+[32m2022-08-31 11:01:35.432[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m32[0m - [32m[1mSniffing started[0m
+[32m2022-08-31 11:01:35.432[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m82[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (345558), thread 'MainThread' (140501070071616):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mdetection.py[0m", line [33m82[0m, in [35m<module>[0m
+    [1msniffer[0m[35m[1m.[0m[1mrun[0m[1m([0m[1m)[0m
+    [36m│       └ [0m[36m[1m<function Sniffer.run at 0x7fc8f1d6e050>[0m
+    [36m└ [0m[36m[1m<__main__.Sniffer object at 0x7fc8f3f93eb0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mdetection.py[0m", line [33m33[0m, in [35mrun[0m
+    [1msniff[0m[1m([0m[1mprn[0m[35m[1m=[0m[1mcls[0m[35m[1m.[0m[1mprocess_packets[0m[1m,[0m [1miface[0m[35m[1m=[0m[1miface[0m[1m,[0m [1mstore[0m[35m[1m=[0m[36m[1mFalse[0m[1m)[0m
+    [36m│         │   │                      └ [0m[36m[1mNone[0m
+    [36m│         │   └ [0m[36m[1m<function Sniffer.process_packets at 0x7fc8f1d6e3b0>[0m
+    [36m│         └ [0m[36m[1m<__main__.Sniffer object at 0x7fc8f3f93eb0>[0m
+    [36m└ [0m[36m[1m<function sniff at 0x7fc8f2b41750>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/scapy/sendrecv.py", line 1263, in sniff
+    sniffer._run(*args, **kwargs)
+    │       │     │       └ {'prn': <bound method Sniffer.process_packets of <__main__.Sniffer object at 0x7fc8f3f93eb0>>, 'iface': None, 'store': False}
+    │       │     └ ()
+    │       └ <function AsyncSniffer._run at 0x7fc8f2b26d40>
+    └ <scapy.sendrecv.AsyncSniffer object at 0x7fc8f1d46f20>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/scapy/sendrecv.py", line 1127, in _run
+    sniff_sockets[L2socket(type=ETH_P_ALL, iface=iface,
+    │             │             │                └ <NetworkInterface eth0 [UP+BROADCAST+RUNNING+SLAVE]>
+    │             │             └ 3
+    │             └ <L2ListenSocket: read packets at layer 2 using Linux PF_PACKET sockets. Also receives the packets going OUT>
+    └ {}
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/scapy/arch/linux.py", line 486, in __init__
+    self.ins = socket.socket(
+    │          │      └ <class 'socket.socket'>
+    │          └ <module 'socket' from '/usr/lib/python3.10/socket.py'>
+    └ <scapy.arch.linux.L2ListenSocket object at 0x7fc8f1d46fe0>
+  File "/usr/lib/python3.10/socket.py", line 232, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+    │       │      │        │     │       │     │      └ None
+    │       │      │        │     │       │     └ 768
+    │       │      │        │     │       └ <SocketKind.SOCK_RAW: 3>
+    │       │      │        │     └ <AddressFamily.AF_PACKET: 17>
+    │       │      │        └ <socket.socket fd=-1, family=AddressFamily.AF_UNSPEC, type=0, proto=0>
+    │       │      └ <slot wrapper '__init__' of '_socket.socket' objects>
+    │       └ <class '_socket.socket'>
+    └ <module '_socket' (built-in)>
+
+[31m[1mPermissionError[0m:[1m [Errno 1] Operation not permitted[0m
+[32m2022-08-31 11:02:16.325[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m32[0m - [32m[1mSniffing started[0m
+[32m2022-08-31 11:02:30.409[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
+[32m2022-08-31 11:02:30.412[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
+[32m2022-08-31 11:02:32.870[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
+[32m2022-08-31 11:02:33.540[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
+[32m2022-08-31 11:02:33.865[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
+[32m2022-08-31 11:02:34.148[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mprocess_packets[0m:[36m44[0m - [32m[1mmam icmp![0m
