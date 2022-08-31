@@ -22,10 +22,9 @@ def update_state(once=False):
         with open(STATE_PATH, "w") as f:
             dump(response.json(), f)
         logger.success("State updated")
+        sleep(INTERVAL)
         if once:
             break
-        sleep(INTERVAL)
-
 
 if __name__ == "__main__":
     initialize("./config.yaml")
