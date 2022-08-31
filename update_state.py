@@ -12,7 +12,7 @@ from mtd_sources.config import get_config
 CONFIG_PATH = "./config.yaml"
 
 @logger.catch
-def update_state():
+def update_state(once=False):
     config = get_config(CONFIG_PATH)
     INTERVAL = config["STATE_UPDATE_INTERVAL"] # [s]
     APP_RECONFIGURATOR_URL = config["APP_RECONFIGURATOR_URL"]
@@ -22,8 +22,9 @@ def update_state():
         with open(STATE_PATH, "w") as f:
             dump(response.json(), f)
         logger.success("State updated")
+        if once:
+            break
         sleep(INTERVAL)
-
 
 
 if __name__ == "__main__":
