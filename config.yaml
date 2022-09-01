@@ -24,3 +24,6 @@ APP_RECONFIGURATOR_URL: "http://localhost:5100/update"
 
 # user
 USER_INTERVAL: 2
+
+# adversary
+ADVERSARY_INTERVAL: 10

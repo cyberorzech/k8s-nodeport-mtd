@@ -5,6 +5,7 @@ from requests import get
 from time import sleep
 
 from mtd_sources.logger import initialize
+from mtd_sources.config import get_config
 
 @logger.catch
 def perform_port_scan(target_ip: str) -> list:
@@ -35,8 +36,8 @@ def find_legitimate_app(target_ip: str, open_ports: list):
 
 @logger.catch
 def exploit():
-    INTERVAL = 10
-    sleep(INTERVAL)
+    interval = get_config("./config.yaml")["ADVERSARY_INTERVAL"]
+    sleep(interval)
 
 @logger.catch
 def send_request(target_ip: str, port: str):
