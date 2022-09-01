@@ -48,7 +48,7 @@ def send_request(target_ip: str, port: str):
     return res
 
 @logger.catch
-def main():
+def scenario_1():
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
@@ -67,6 +67,30 @@ def main():
         successful_exploits += 1
         logger.success(f"Successfully exploited app at {TARGET_IP}:{legitimate_port}")
         logger.success(f"{successful_exploits=}")
+
+@logger.catch
+def scenario_2():
+    successful_exploits = 0
+    unsuccessful_exploits = 0
+    while True:
+        TARGET_IP = "10.2.255.1"
+        logger.info(f"Target IP is set to {TARGET_IP}")
+        open_ports = perform_port_scan(TARGET_IP)
+        logger.info(f"Open ports are: {open_ports}")
+        # For every port: exploit and check if the service is legitimate
+        for port in open_ports:
+            exploit()
+            app_response = send_request(TARGET_IP, port)
+            if not "legitimate" in app_response:
+                unsuccessful_exploits += 1
+                logger.info(f"{unsuccessful_exploits=}")
+                continue
+            successful_exploits += 1
+            logger.success(f"Successfully exploited app at {TARGET_IP}:{port}")
+            logger.success(f"{successful_exploits=}")
+
+def main():
+    scenario_2()
 
 
 if __name__ == "__main__":
