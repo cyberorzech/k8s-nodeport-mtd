@@ -1,0 +1,16 @@
+[32m2022-09-01 11:30:26.319[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mmain[0m:[36m38[0m - [31m[1mAn error has been caught in function 'main', process 'MainProcess' (1263675), thread 'MainThread' (140677153195840):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m42[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7ff1f298c310>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m38[0m, in [35mmain[0m
+    [1mprint[0m[1m([0m[1mperform_port_scan[0m[1m([0m[36m"10.2.255.1"[0m[1m)[0m[1m)[0m
+    [36m      └ [0m[36m[1m<function perform_port_scan at 0x7ff1f2977520>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m12[0m, in [35mperform_port_scan[0m
+    [35m[1mif[0m [1mname[0m[1m([0m[1m)[0m [35m[1m!=[0m [36m"posix"[0m[1m:[0m
+    [36m   └ [0m[36m[1m'posix'[0m
+
+[31m[1mTypeError[0m:[1m 'str' object is not callable[0m
