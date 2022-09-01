@@ -1,6 +1,6 @@
 # logs
 LOG_FILE: auto
-LOG_LVL: SUCCESS
+LOG_LVL: INFO
 LOG_RETENTION: 5d
 
 # k8s
