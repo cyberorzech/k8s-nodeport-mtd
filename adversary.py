@@ -1,12 +1,13 @@
 import os
 from loguru import logger
 from subprocess import check_output
+from requests import get
 
 
 from mtd_sources.logger import initialize
 
 @logger.catch
-def perform_port_scan(target_ip: str):
+def perform_port_scan(target_ip: str) -> list:
     command = f"nmap -p 30000-32999 {target_ip} "
     command += "| grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
     try:
@@ -24,7 +25,9 @@ def perform_port_scan(target_ip: str):
 
 @logger.catch
 def find_legitimate_app(target_ip: str, open_ports: list):
-    pass
+    for port in open_ports:
+        response = send_request(target_ip, port)
+
 
 @logger.catch
 def exploit():
@@ -32,11 +35,20 @@ def exploit():
 
 @logger.catch
 def send_request(target_ip: str, port: str):
-    pass
+    """
+    Function sends GET method to K8s based service and parse response
+    """
+    url = f"http://{target_ip}:{port}"
+    res = get(url).text
+    return res
 
 @logger.catch
 def main():
-    print(perform_port_scan("10.2.255.1"))
+    TARGET_IP = "10.2.255.1"
+    open_ports = perform_port_scan(TARGET_IP)
+    legitimate_app = find_legitimate_app(TARGET_IP, open_ports)
+
+
 
 if __name__ == "__main__":
     initialize("config.yaml")
