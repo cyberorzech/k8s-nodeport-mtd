@@ -24,7 +24,7 @@ class Sniffer:
     @logger.catch
     def run(cls, iface=None):
         logger.success("Sniffing started")
-        sniff(prn=cls.process_packets,iface="lo", store=False)
+        sniff(prn=cls.process_packets, iface="lo", store=False)
 
     @logger.catch
     def process_packets(cls, packet):
