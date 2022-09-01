@@ -25,9 +25,13 @@ def perform_port_scan(target_ip: str) -> list:
 
 @logger.catch
 def find_legitimate_app(target_ip: str, open_ports: list):
+    legitimate_port = None
     for port in open_ports:
         response = send_request(target_ip, port)
-
+        if "legitimate" in response:
+            legitimate_port = port
+            break
+    return legitimate_port
 
 @logger.catch
 def exploit():
@@ -47,7 +51,7 @@ def main():
     TARGET_IP = "10.2.255.1"
     open_ports = perform_port_scan(TARGET_IP)
     legitimate_app = find_legitimate_app(TARGET_IP, open_ports)
-
+    print(legitimate_app)
 
 
 if __name__ == "__main__":
