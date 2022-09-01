@@ -20,7 +20,10 @@ def user():
         response = get(f"{state_repo_url}?service_name={SERVICE_NAME}")
         try:
             service_port = response.json()
-            if not isinstance(service_port, int): raise TypeError(f"Expected type of service port: int. Got {type(service_port)} instead.")
+            if not isinstance(service_port, int):
+                raise TypeError(
+                    f"Expected type of service port: int. Got {type(service_port)} instead."
+                )
         except TypeError as te:
             logger.error(te)
 
@@ -33,6 +36,7 @@ def user():
             unsuccessful_requests += 1
             logger.warning(f"Unsuccessful requests: {unsuccessful_requests}")
         sleep(config["USER_INTERVAL"])
+
 
 if __name__ == "__main__":
     user()

@@ -13,9 +13,13 @@ class K8s:
                 f"Arguments must be strings, got {type(resource_name)=} and {type(resource_type)=} instead"
             )
         if resource_type == "pod":
-            res = cls.client.read_namespaced_pod(namespace="default", name=resource_name)
+            res = cls.client.read_namespaced_pod(
+                namespace="default", name=resource_name
+            )
         elif resource_type == "service":
-            res = cls.client.read_namespaced_service(namespace="default", name=resource_name)
+            res = cls.client.read_namespaced_service(
+                namespace="default", name=resource_name
+            )
         else:
             raise ValueError("This resource is either invalid or not implemented")
         return
@@ -24,15 +28,21 @@ class K8s:
     def get_nodeport(cls, resource_name: str) -> int:
         if not isinstance(resource_name, str):
             raise TypeError(f"Argument must be str, got {type(resource_name)}")
-        res = cls.client.read_namespaced_service(namespace='default', name=resource_name)
-        logger.info("This method returns only first node port (assuming only one nodeport)")
+        res = cls.client.read_namespaced_service(
+            namespace="default", name=resource_name
+        )
+        logger.info(
+            "This method returns only first node port (assuming only one nodeport)"
+        )
         return res.spec.ports[0].node_port
 
     @logger.catch
     def patch_service(cls, name: str, body: dict):
         if not isinstance(name, str) or not isinstance(body, dict):
-            raise TypeError(f"Arguments must be string and dict, got {type(name)=} and {type(body)=}")
-        cls.client.patch_namespaced_service(name=name, namespace='default', body=body)
+            raise TypeError(
+                f"Arguments must be string and dict, got {type(name)=} and {type(body)=}"
+            )
+        cls.client.patch_namespaced_service(name=name, namespace="default", body=body)
 
     @logger.catch
     def __check_cluster_connection(cls):

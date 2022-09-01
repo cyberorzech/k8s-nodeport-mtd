@@ -32,9 +32,6 @@ class Sniffer:
             logger.warning("Port scan detected. Changing cluster state reactively...")
             update_state(once=True)
 
-
-
-
     @logger.catch
     def __get_args(cls):
         parser = argparse.ArgumentParser()
@@ -44,7 +41,6 @@ class Sniffer:
         iface = args.iface
         show_raw = args.show_raw
         args = parser.parse_args()
-
 
 
 if __name__ == "__main__":

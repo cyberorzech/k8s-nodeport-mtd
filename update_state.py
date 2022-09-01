@@ -11,10 +11,11 @@ from mtd_sources.config import get_config
 # STATE_PATH = "./state.json"
 CONFIG_PATH = "./config.yaml"
 
+
 @logger.catch
 def update_state(once=False):
     config = get_config(CONFIG_PATH)
-    INTERVAL = config["STATE_UPDATE_INTERVAL"] # [s]
+    INTERVAL = config["STATE_UPDATE_INTERVAL"]  # [s]
     APP_RECONFIGURATOR_URL = config["APP_RECONFIGURATOR_URL"]
     STATE_PATH = config["STATE_PATH"]
     while True:
@@ -25,6 +26,7 @@ def update_state(once=False):
         sleep(INTERVAL)
         if once:
             break
+
 
 if __name__ == "__main__":
     initialize("./config.yaml")

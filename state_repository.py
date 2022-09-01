@@ -2,7 +2,7 @@ from loguru import logger
 from flask import Flask
 from flask_restful import Api
 
-#from mtd_sources.logger import initialize
+# from mtd_sources.logger import initialize
 from mtd_sources.state import State
 
 
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     api = Api(app)
     api.add_resource(State, "/state")
     app.run()
-    #state_repository()
+    # state_repository()

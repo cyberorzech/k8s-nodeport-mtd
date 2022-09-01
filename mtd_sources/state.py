@@ -6,6 +6,7 @@ from mtd_sources.config import get_config
 
 CONFIG_PATH = "./config.yaml"
 
+
 class State(Resource):
     def __init__(cls) -> None:
         super().__init__()
