@@ -7,10 +7,14 @@ from time import sleep
 from mtd_sources.logger import initialize
 from mtd_sources.config import get_config
 
+config = get_config("./config.yaml")
+TARGET_IP = config["MASTER_NODE_IP"]
+LOWEST_NODE_PORT = config["LOWEST_NODE_PORT"]
+HIGHEST_NODE_PORT = config["HIGHEST_NODE_PORT"]
 
 @logger.catch
 def perform_port_scan(target_ip: str) -> list:
-    command = f"nmap -p 30000-32999 {target_ip} "
+    command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} "
     command += "| grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
     try:
         if os.name != "posix":
@@ -42,8 +46,8 @@ def find_legitimate_app(target_ip: str, open_ports: list):
 
 @logger.catch
 def exploit():
-    interval = get_config("./config.yaml")["ADVERSARY_INTERVAL"]
-    sleep(interval)
+    exploit_time = config["EXPLOIT_TIME"]
+    sleep(exploit_time)
 
 
 @logger.catch
@@ -61,7 +65,6 @@ def scenario_1():
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
-        TARGET_IP = "10.2.255.1"
         logger.info(f"Target IP is set to {TARGET_IP}")
         open_ports = perform_port_scan(TARGET_IP)
         logger.info(f"Open ports are: {open_ports}")

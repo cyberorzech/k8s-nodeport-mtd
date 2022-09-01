@@ -32,3 +32,11 @@
 [32m2022-09-01 13:25:19.097[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m56[0m - [1mTarget IP is set to 10.2.255.1[0m
 [32m2022-09-01 13:25:19.312[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m58[0m - [1mOpen ports are: [30043, 31776, 31827, 32186, 32351, 32385, 32707][0m
 [32m2022-09-01 13:25:19.358[0m | [1mINFO    [0m | [36m__main__[0m:[36mmain[0m:[36m60[0m - [1mLegitimate app found at 32707[0m
+[32m2022-09-01 15:07:26.320[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m90[0m - [1mTarget IP is set to 10.2.255.1[0m
+[32m2022-09-01 15:07:26.534[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m92[0m - [1mOpen ports are: [30043, 31776, 31827, 32186, 32351, 32385, 32707][0m
+[32m2022-09-01 15:07:26.587[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m94[0m - [1mLegitimate app found at 32707[0m
+[32m2022-09-01 15:07:36.609[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mscenario_2[0m:[36m102[0m - [32m[1mSuccessfully exploited app at 10.2.255.1:32707[0m
+[32m2022-09-01 15:07:36.610[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mscenario_2[0m:[36m103[0m - [32m[1msuccessful_exploits=1[0m
+[32m2022-09-01 15:07:36.610[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m90[0m - [1mTarget IP is set to 10.2.255.1[0m
+[32m2022-09-01 15:07:36.824[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m92[0m - [1mOpen ports are: [30043, 31776, 31827, 32186, 32351, 32385, 32707][0m
+[32m2022-09-01 15:07:36.859[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_2[0m:[36m94[0m - [1mLegitimate app found at 32707[0m
