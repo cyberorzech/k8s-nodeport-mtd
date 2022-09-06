@@ -12,6 +12,7 @@ TARGET_IP = config["MASTER_NODE_IP"]
 LOWEST_NODE_PORT = config["LOWEST_NODE_PORT"]
 HIGHEST_NODE_PORT = config["HIGHEST_NODE_PORT"]
 
+
 @logger.catch
 def perform_port_scan(target_ip: str) -> list:
     command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} "

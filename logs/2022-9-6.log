@@ -201,3 +201,1001 @@
 [32m2022-09-06 18:32:30.486[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m11[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=18.2[0m
 [32m2022-09-06 18:32:31.490[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m11[0m - [32m[1mcpu_usage=5.0%, mem_usage[2]=18.2[0m
 [32m2022-09-06 18:32:32.493[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m11[0m - [32m[1mcpu_usage=9.5%, mem_usage[2]=18.1[0m
+[32m2022-09-06 19:11:07.088[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=2.8%, mem_usage[2]=20.6%[0m
+[32m2022-09-06 19:11:07.090[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m38[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1682041), thread 'MainThread' (139871247034176):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m38[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f3642166560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mresults[0m [35m[1m=[0m [1mpd[0m[35m[1m.[0m[1mconcat[0m[1m([0m[1m[[0m[1mresults[0m[1m,[0m [1mdata[0m[1m][0m[1m)[0m
+    [36m          │  │       │        └ [0m[36m[1m   timestamp  cpu_usage [%]                                      mem_usage [%][0m
+    [36m          │  │       │          [0m[36m[1m0   1.002773            2.8  (16388194304, 130...[0m
+    [36m          │  │       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m          │  │         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m          │  │         [0m[36m[1mIndex: [][0m
+    [36m          │  └ [0m[36m[1m<function concat at 0x7f3642d99240>[0m
+    [36m          └ [0m[36m[1m<module 'pandas' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/pandas/__init__.py'>[0m
+
+[31m[1mUnboundLocalError[0m:[1m local variable 'results' referenced before assignment[0m
+[32m2022-09-06 19:12:24.801[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.4%[0m
+[32m2022-09-06 19:12:24.804[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m41[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1682840), thread 'MainThread' (139885374875456):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f398c2c2560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mresults[0m [35m[1m=[0m [1mpd[0m[35m[1m.[0m[1mconcat[0m[1m([0m[1m[[0m[1mresults[0m[1m,[0m [1mdata[0m[1m][0m[1m)[0m
+    [36m          │  │       │        └ [0m[36m[1m   timestamp  cpu_usage [%]                                      mem_usage [%][0m
+    [36m          │  │       │          [0m[36m[1m0   1.002942            3.8  (16388194304, 130...[0m
+    [36m          │  │       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m          │  │         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m          │  │         [0m[36m[1mIndex: [][0m
+    [36m          │  └ [0m[36m[1m<function concat at 0x7f398cef5240>[0m
+    [36m          └ [0m[36m[1m<module 'pandas' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/pandas/__init__.py'>[0m
+
+[31m[1mUnboundLocalError[0m:[1m local variable 'results' referenced before assignment[0m
+[32m2022-09-06 19:12:47.567[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=3.0%, mem_usage[2]=20.2%[0m
+[32m2022-09-06 19:12:47.570[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m41[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1683088), thread 'MainThread' (140224060446528):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f8867682560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mresults[0m [35m[1m=[0m [1mpd[0m[35m[1m.[0m[1mconcat[0m[1m([0m[1m[[0m[1mresults[0m[1m,[0m [1mdata[0m[1m][0m[1m)[0m
+    [36m          │  │       │        └ [0m[36m[1m   timestamp  cpu_usage [%]                                      mem_usage [%][0m
+    [36m          │  │       │          [0m[36m[1m0    1.00308            3.0  (16388194304, 130...[0m
+    [36m          │  │       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m          │  │         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m          │  │         [0m[36m[1mIndex: [][0m
+    [36m          │  └ [0m[36m[1m<function concat at 0x7f8868535240>[0m
+    [36m          └ [0m[36m[1m<module 'pandas' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/pandas/__init__.py'>[0m
+
+[31m[1mUnboundLocalError[0m:[1m local variable 'results' referenced before assignment[0m
+[32m2022-09-06 19:12:59.696[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.1%[0m
+[32m2022-09-06 19:12:59.701[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m41[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1683213), thread 'MainThread' (139623436007232):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7efc8f666560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mresults[0m [35m[1m=[0m [1mpd[0m[35m[1m.[0m[1mconcat[0m[1m([0m[1m[[0m[1mresults[0m[1m,[0m [1mdata[0m[1m][0m[1m)[0m
+    [36m          │  │       │        └ [0m[36m[1m   timestamp  cpu_usage [%]                                      mem_usage [%][0m
+    [36m          │  │       │          [0m[36m[1m0   1.005506            3.3  (16388194304, 130...[0m
+    [36m          │  │       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m          │  │         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m          │  │         [0m[36m[1mIndex: [][0m
+    [36m          │  └ [0m[36m[1m<function concat at 0x7efc90521240>[0m
+    [36m          └ [0m[36m[1m<module 'pandas' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/pandas/__init__.py'>[0m
+
+[31m[1mUnboundLocalError[0m:[1m local variable 'results' referenced before assignment[0m
+[32m2022-09-06 19:14:02.107[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.6%[0m
+[32m2022-09-06 19:14:07.976[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m41[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1683506), thread 'MainThread' (139735011452736):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f16975399a0, file "/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+           └ <function _run_code at 0x7f169772bac0>
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f16975399a0, file "/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/[0m[32m[1m__main__.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mcli[0m[35m[1m.[0m[1mmain[0m[1m([0m[1m)[0m
+    [36m│   └ [0m[36m[1m<function main at 0x7f16962b15a0>[0m
+    [36m└ [0m[36m[1m<module 'debugpy.server.cli' from '/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debug...[0m
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/[0m[32m[1mcli.py[0m", line [33m430[0m, in [35mmain[0m
+    [1mrun[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function run_file at 0x7f16962b1360>[0m
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/[0m[32m[1mcli.py[0m", line [33m284[0m, in [35mrun_file[0m
+    [1mrunpy[0m[35m[1m.[0m[1mrun_path[0m[1m([0m[1mtarget[0m[1m,[0m [1mrun_name[0m[35m[1m=[0m[36m"__main__"[0m[1m)[0m
+    [36m│     │        └ [0m[36m[1m'/home/gr/k8s-nodeport-mtd/cpu_mem_measurement.py'[0m
+    [36m│     └ [0m[36m[1m<function run_path at 0x7f1696676830>[0m
+    [36m└ [0m[36m[1m<module '_pydevd_bundle.pydevd_runpy' from '/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/pyt...[0m
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/[0m[32m[1mpydevd_runpy.py[0m", line [33m321[0m, in [35mrun_path[0m
+    [35m[1mreturn[0m [1m_run_module_code[0m[1m([0m[1mcode[0m[1m,[0m [1minit_globals[0m[1m,[0m [1mrun_name[0m[1m,[0m
+    [36m       │                │     │             └ [0m[36m[1m'__main__'[0m
+    [36m       │                │     └ [0m[36m[1mNone[0m
+    [36m       │                └ [0m[36m[1m<code object <module> at 0x7f1696248870, file "/home/gr/k8s-nodeport-mtd/cpu_mem_measurement.py", line 1>[0m
+    [36m       └ [0m[36m[1m<function _run_module_code at 0x7f16966764d0>[0m
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/[0m[32m[1mpydevd_runpy.py[0m", line [33m135[0m, in [35m_run_module_code[0m
+    [1m_run_code[0m[1m([0m[1mcode[0m[1m,[0m [1mmod_globals[0m[1m,[0m [1minit_globals[0m[1m,[0m
+    [36m│         │     │            └ [0m[36m[1mNone[0m
+    [36m│         │     └ [0m[36m[1m{'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/gr/k8s-...[0m
+    [36m│         └ [0m[36m[1m<code object <module> at 0x7f1696248870, file "/home/gr/k8s-nodeport-mtd/cpu_mem_measurement.py", line 1>[0m
+    [36m└ [0m[36m[1m<function _run_code at 0x7f16966760e0>[0m
+
+  File "[32m/home/gr/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/[0m[32m[1mpydevd_runpy.py[0m", line [33m124[0m, in [35m_run_code[0m
+    [1mexec[0m[1m([0m[1mcode[0m[1m,[0m [1mrun_globals[0m[1m)[0m
+    [36m     │     └ [0m[36m[1m{'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/gr/k8s-...[0m
+    [36m     └ [0m[36m[1m<code object <module> at 0x7f1696248870, file "/home/gr/k8s-nodeport-mtd/cpu_mem_measurement.py", line 1>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f166ea3ba30>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mresults[0m [35m[1m=[0m [1mpd[0m[35m[1m.[0m[1mconcat[0m[1m([0m[1m[[0m[1mresults[0m[1m,[0m [1mdata[0m[1m][0m[1m)[0m
+    [36m          │  │       │        └ [0m[36m[1m   timestamp  cpu_usage [%]                                      mem_usage [%][0m
+    [36m          │  │       │          [0m[36m[1m0    9.64406            4.0  (16388194304, 130...[0m
+    [36m          │  │       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m          │  │         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m          │  │         [0m[36m[1mIndex: [][0m
+    [36m          │  └ [0m[36m[1m<function concat at 0x7f166f514b80>[0m
+    [36m          └ [0m[36m[1m<module 'pandas' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/pandas/__init__.py'>[0m
+
+[31m[1mUnboundLocalError[0m:[1m local variable 'results' referenced before assignment[0m
+[32m2022-09-06 19:14:34.351[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.3%[0m
+[32m2022-09-06 19:14:35.359[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmain[0m:[36m21[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.3%[0m
+[32m2022-09-06 19:14:35.593[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m34[0m - [1msigint detected[0m
+[32m2022-09-06 19:14:47.927[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:14:48.934[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:14:49.940[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=8.2%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:14:50.945[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:14:51.583[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m34[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:08.530[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:15:09.536[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:15:10.542[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.3%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:15:11.547[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=9.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:12.169[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:12.173[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:12.553[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:13.559[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=8.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:14.564[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=5.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:15.570[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:16.576[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:17.582[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=5.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:18.589[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:19.595[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:20.601[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:21.607[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:22.610[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=11.6%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:22.633[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:22.635[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:22.792[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:22.795[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:22.937[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:22.940[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:23.614[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=25.1%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:23.689[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:23.692[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:23.848[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:23.850[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:24.010[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:24.012[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:24.169[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:24.172[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:24.330[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:24.333[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:24.472[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:24.473[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:24.619[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=27.9%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:24.633[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:24.634[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:25.625[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=18.1%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:26.630[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=10.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:26.682[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:26.684[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:26.857[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:26.859[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:27.000[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:27.002[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:27.144[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:27.147[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:27.304[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:27.306[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:27.464[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:27.467[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:27.635[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=6.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:28.169[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:28.171[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:28.345[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:28.348[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:28.521[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:28.523[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:28.640[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=5.1%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:28.680[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:15:28.682[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1684787), thread 'MainThread' (140191761250112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m39[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1mresults[0m[1m)[0m
+    [36m│       └ [0m[36m[1mEmpty DataFrame[0m
+    [36m│         [0m[36m[1mColumns: [timestamp, cpu_usage [%], mem_usage [%]][0m
+    [36m│         [0m[36m[1mIndex: [][0m
+    [36m└ [0m[36m[1m<function measure at 0x7f80e2396560>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m19[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f80efafc9d0>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mexport_path[0m [35m[1m=[0m [1mget_config[0m[1m([0m[1m)[0m[1m[[0m[36m"EXPORT_PATH"[0m[1m][0m
+    [36m              └ [0m[36m[1m<function get_config at 0x7f80e251c160>[0m
+
+[31m[1mTypeError[0m:[1m get_config() missing 1 required positional argument: 'config_path'[0m
+[32m2022-09-06 19:15:41.474[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=10.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:42.481[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:43.486[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:44.491[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m21[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:15:45.178[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m30[0m - [1msigint detected[0m
+[32m2022-09-06 19:17:47.246[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:48.251[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:49.256[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:50.262[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:51.267[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:52.272[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:52.727[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m31[0m - [1msigint detected[0m
+[32m2022-09-06 19:17:52.728[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1686395), thread 'MainThread' (140104943613760):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f6cab7d65f0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m20[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f6cb8f3ca60>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mresults[0m[35m[1m.[0m[1mreset_index[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'results' is not defined[0m
+[32m2022-09-06 19:17:53.278[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=5.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:54.283[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:55.288[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:56.293[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:57.298[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:58.304[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:17:59.310[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:00.315[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:01.321[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.7%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:02.325[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:03.331[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:04.336[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.2%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:05.342[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:06.348[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:07.255[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m31[0m - [1msigint detected[0m
+[32m2022-09-06 19:18:07.256[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1686395), thread 'MainThread' (140104943613760):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f6cab7d65f0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m20[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f6cb8f3ca60>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mresults[0m[35m[1m.[0m[1mreset_index[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'results' is not defined[0m
+[32m2022-09-06 19:18:07.352[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:07.494[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m31[0m - [1msigint detected[0m
+[32m2022-09-06 19:18:07.495[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1686395), thread 'MainThread' (140104943613760):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f6cab7d65f0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m20[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f6cb8f3ca60>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mresults[0m[35m[1m.[0m[1mreset_index[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'results' is not defined[0m
+[32m2022-09-06 19:18:07.687[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m31[0m - [1msigint detected[0m
+[32m2022-09-06 19:18:07.688[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1686395), thread 'MainThread' (140104943613760):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f6cab7d65f0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m20[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f6cb8f3ca60>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mresults[0m[35m[1m.[0m[1mreset_index[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'results' is not defined[0m
+[32m2022-09-06 19:18:07.894[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m31[0m - [1msigint detected[0m
+[32m2022-09-06 19:18:07.895[0m | [31m[1mERROR   [0m | [36mpsutil[0m:[36mcpu_percent[0m:[36m1744[0m - [31m[1mAn error has been caught in function 'cpu_percent', process 'MainProcess' (1686395), thread 'MainThread' (140104943613760):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m41[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f6cab7d65f0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m20[0m, in [35mmeasure[0m
+    [1mcpu_usage[0m [35m[1m=[0m [1mpsutil[0m[35m[1m.[0m[1mcpu_percent[0m[1m([0m[1mONE_SECOND[0m[1m)[0m
+    [36m            │      │           └ [0m[36m[1m1[0m
+    [36m            │      └ [0m[36m[1m<function cpu_percent at 0x7f6cb8f3ca60>[0m
+    [36m            └ [0m[36m[1m<module 'psutil' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py'>[0m
+
+> File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/psutil/__init__.py", line 1744, in cpu_percent
+    time.sleep(interval)
+    │    │     └ 1
+    │    └ <built-in function sleep>
+    └ <module 'time' (built-in)>
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m32[0m, in [35msignal_handler[0m
+    [1mresults[0m[35m[1m.[0m[1mreset_index[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'results' is not defined[0m
+[32m2022-09-06 19:18:08.357[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:18:09.363[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:25:08.347[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=21.3%[0m
+[32m2022-09-06 19:25:11.361[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:11.361[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:12.364[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.7%, mem_usage[2]=21.3%[0m
+[32m2022-09-06 19:25:15.375[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:15.376[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:16.379[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=21.3%[0m
+[32m2022-09-06 19:25:19.389[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:19.390[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:20.392[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=21.3%[0m
+[32m2022-09-06 19:25:23.402[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:23.403[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:24.406[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.2%, mem_usage[2]=21.3%[0m
+[32m2022-09-06 19:25:27.418[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:27.419[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:28.422[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=21.4%[0m
+[32m2022-09-06 19:25:31.432[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m36[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:25:31.433[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mmeasure[0m:[36m37[0m - [33m[1mAfter lock[0m
+[32m2022-09-06 19:25:32.436[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m26[0m - [32m[1mcpu_usage=4.2%, mem_usage[2]=21.4%[0m
+[32m2022-09-06 19:25:32.801[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m42[0m - [1msigint detected[0m
+[32m2022-09-06 19:27:01.780[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m43[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (1692264), thread 'MainThread' (139873777239872):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m43[0m, in [35m<module>[0m
+    [1mmeasure[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function measure at 0x7f36d8e7a710>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mcpu_mem_measurement.py[0m", line [33m17[0m, in [35mmeasure[0m
+    [1mlock[0m [35m[1m=[0m [1mLock[0m[1m([0m[1m)[0m
+
+[31m[1mNameError[0m:[1m name 'Lock' is not defined[0m
+[32m2022-09-06 19:27:10.130[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:10.140[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:11.143[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.2%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:11.150[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:12.152[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:12.161[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:13.163[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.2%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:13.168[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:14.171[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.7%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:14.178[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:15.180[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:15.188[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:16.190[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=5.5%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:16.198[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:17.201[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=10.2%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:17.207[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:18.210[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=6.0%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:18.217[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:19.219[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:19.226[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:20.228[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:20.235[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:21.238[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.7%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:21.245[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:22.248[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=8.5%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:22.256[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:23.258[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.3%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:23.265[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:24.268[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=5.5%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:24.275[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:25.278[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.7%, mem_usage[2]=21.0%[0m
+[32m2022-09-06 19:27:25.290[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:25.858[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m35[0m - [1msigint detected[0m
+[32m2022-09-06 19:27:42.574[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:42.582[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:43.585[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:43.591[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:44.592[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:44.599[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:45.601[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:45.608[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:46.611[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:46.617[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:47.620[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=10.3%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:27:47.626[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:48.629[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.0%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:27:48.635[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:49.638[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.8%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:27:49.644[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:50.646[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=3.3%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:27:50.652[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:51.655[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.9%[0m
+[32m2022-09-06 19:27:51.661[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:52.664[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=7.3%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:52.671[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:53.673[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:27:53.679[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:27:53.871[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m35[0m - [1msigint detected[0m
+[32m2022-09-06 19:28:00.579[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.5%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:28:00.589[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:28:01.591[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m22[0m - [32m[1mcpu_usage=4.8%, mem_usage[2]=20.8%[0m
+[32m2022-09-06 19:28:01.598[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mmeasure[0m:[36m30[0m - [32m[1mResults exported to csv[0m
+[32m2022-09-06 19:28:02.063[0m | [1mINFO    [0m | [36m__main__[0m:[36msignal_handler[0m:[36m35[0m - [1msigint detected[0m
