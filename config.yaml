@@ -30,6 +30,7 @@ EXPLOIT_TIME: 10
 LOWEST_NODE_PORT: 30000
 HIGHEST_NODE_PORT: 32767
 P1: 0.9
+P2: 0.7
 
 #cpu mem measurement
 EXPORT_PATH: "cpu_mem.csv"

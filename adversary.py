@@ -7,6 +7,7 @@ from time import sleep
 from mtd_sources.logger import initialize
 from mtd_sources.config import get_config
 from mtd_sources.probability import draw
+from update_state import update_state
 
 config = get_config("./config.yaml")
 TARGET_IP = config["MASTER_NODE_IP"]
@@ -15,7 +16,10 @@ HIGHEST_NODE_PORT = config["HIGHEST_NODE_PORT"]
 
 
 @logger.catch
-def perform_port_scan(target_ip: str) -> list:
+def perform_port_scan(target_ip: str, detection_probability=0.0) -> list:
+    """
+    Function that performs nmap scan and open ports extraction. If scan is detected, it is performed anyway.
+    """
     command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} "
     command += "| grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
     try:
@@ -32,6 +36,8 @@ def perform_port_scan(target_ip: str) -> list:
         :-1
     ]  # last element is dropped because it is empty (contains no port number)
     open_ports = [int(el) for el in open_ports]
+    if draw(probability=detection_probability):
+        update_state(once=True)
     return open_ports
 
 
@@ -100,17 +106,6 @@ def scenario_2():
             logger.success(f"Legitimate app found at {legitimate_port}")
             successful_exploits += 1
         else: unsuccessful_exploits += 1
-        
-        
-        # exploit()
-        # app_response = send_request(TARGET_IP, legitimate_port)
-        # if not "legitimate" in app_response:
-        #     unsuccessful_exploits += 1
-        #     logger.info(f"{unsuccessful_exploits=}")
-        #     continue
-        # successful_exploits += 1
-        # logger.success(f"Successfully exploited app at {TARGET_IP}:{legitimate_port}")
-        # logger.success(f"{successful_exploits=}")
         logger.info(f"{successful_exploits=}, {unsuccessful_exploits=}")
         sleep(1)
 
