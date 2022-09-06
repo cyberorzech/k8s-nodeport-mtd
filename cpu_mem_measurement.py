@@ -23,7 +23,9 @@ def measure():
 
         stop_time = perf_counter()
         timestamp = stop_time - start_time
-        data = pd.DataFrame(columns=COLUMNS, data=[[timestamp, cpu_usage, mem_usage[2]]])
+        data = pd.DataFrame(
+            columns=COLUMNS, data=[[timestamp, cpu_usage, mem_usage[2]]]
+        )
         results = pd.concat([results, data])
         results.reset_index()
         results.to_csv(export_path)

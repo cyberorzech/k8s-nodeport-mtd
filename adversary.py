@@ -1,5 +1,6 @@
 import os
 import argparse
+from sys import exit
 from loguru import logger
 from subprocess import check_output
 from requests import get
@@ -17,10 +18,17 @@ HIGHEST_NODE_PORT = config["HIGHEST_NODE_PORT"]
 
 
 @logger.catch
-def perform_port_scan(target_ip: str, detection_probability=0.0) -> list:
+def perform_port_scan(target_ip: str, reactive_behavior=False, detection_probability=0.0) -> list:
     """
     Function that performs nmap scan and open ports extraction. If scan is detected, it is performed anyway.
     """
+    try:
+        if detection_probability == 0 and reactive_behavior:
+            raise ValueError(f"In order to choose reactive behavior, detection probability (P2 in config file) must be gt 0")
+    except ValueError as ve:
+        logger.error(ve)
+        exit(1)
+
     command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} "
     command += "| grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
     try:
@@ -37,7 +45,7 @@ def perform_port_scan(target_ip: str, detection_probability=0.0) -> list:
         :-1
     ]  # last element is dropped because it is empty (contains no port number)
     open_ports = [int(el) for el in open_ports]
-    if draw(probability=detection_probability):
+    if reactive_behavior and draw(probability=detection_probability):
         update_state(once=True)
     return open_ports
 
@@ -74,7 +82,7 @@ def send_request(target_ip: str, port: str):
 
 
 @logger.catch
-def scenario_1():
+def scenario_1(reactive_behavior=False):
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
@@ -95,7 +103,7 @@ def scenario_1():
 
 
 @logger.catch
-def scenario_2():
+def scenario_2(reactive_behavior=False):
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
@@ -103,23 +111,37 @@ def scenario_2():
         open_ports = perform_port_scan(TARGET_IP)
         logger.info(f"Open ports are: {open_ports}")
         legit_app_found, legitimate_port = find_legitimate_app(TARGET_IP, open_ports)
-        if legit_app_found: 
+        if legit_app_found:
             logger.success(f"Legitimate app found at {legitimate_port}")
             successful_exploits += 1
-        else: unsuccessful_exploits += 1
+        else:
+            unsuccessful_exploits += 1
         logger.info(f"{successful_exploits=}, {unsuccessful_exploits=}")
         sleep(1)
 
-
+@logger.catch
 def main():
-    #scenario_2()
+    # scenario_2()
     args = get_args()
-    print(args.scenario)
+    if args.type == "proactive":
+        if args.scenario == 1:
+            scenario_1()
+        else:
+            scenario_2()
+    elif args.type == "mixed":
+        pass
+    elif args.type == "reactive":
+        pass
+    
+    
+    
+    #print(args.scenario)
+
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--scenario", default=1)
-    parser.add_argument("-t", "--type", default="proactive")
+    parser.add_argument("-s", "--scenario", default=1, choices=[1, 2])
+    parser.add_argument("-t", "--type", default="proactive", choices=["proactive", "mixed", "reactive"])
     args = parser.parse_args()
     return args
 
