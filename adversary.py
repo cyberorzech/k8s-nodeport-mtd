@@ -1,4 +1,5 @@
 import os
+import argparse
 from loguru import logger
 from subprocess import check_output
 from requests import get
@@ -111,7 +112,16 @@ def scenario_2():
 
 
 def main():
-    scenario_2()
+    #scenario_2()
+    args = get_args()
+    print(args.scenario)
+
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--scenario", default=1)
+    parser.add_argument("-t", "--type", default="proactive")
+    args = parser.parse_args()
+    return args
 
 
 if __name__ == "__main__":
