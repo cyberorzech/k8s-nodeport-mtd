@@ -42,8 +42,8 @@ def find_legitimate_app(target_ip: str, open_ports: list):
         response = send_request(target_ip, port)
         if "legitimate" in response:
             legitimate_port = port
-            break
-    return legitimate_port
+            return True, legitimate_port
+    return False, None
 
 
 @logger.catch
@@ -92,21 +92,27 @@ def scenario_2():
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
-        TARGET_IP = "10.2.255.1"
         logger.info(f"Target IP is set to {TARGET_IP}")
         open_ports = perform_port_scan(TARGET_IP)
         logger.info(f"Open ports are: {open_ports}")
-        legitimate_port = find_legitimate_app(TARGET_IP, open_ports)
-        logger.info(f"Legitimate app found at {legitimate_port}")
-        exploit()
-        app_response = send_request(TARGET_IP, legitimate_port)
-        if not "legitimate" in app_response:
-            unsuccessful_exploits += 1
-            logger.info(f"{unsuccessful_exploits=}")
-            continue
-        successful_exploits += 1
-        logger.success(f"Successfully exploited app at {TARGET_IP}:{legitimate_port}")
-        logger.success(f"{successful_exploits=}")
+        legit_app_found, legitimate_port = find_legitimate_app(TARGET_IP, open_ports)
+        if legit_app_found: 
+            logger.success(f"Legitimate app found at {legitimate_port}")
+            successful_exploits += 1
+        else: unsuccessful_exploits += 1
+        
+        
+        # exploit()
+        # app_response = send_request(TARGET_IP, legitimate_port)
+        # if not "legitimate" in app_response:
+        #     unsuccessful_exploits += 1
+        #     logger.info(f"{unsuccessful_exploits=}")
+        #     continue
+        # successful_exploits += 1
+        # logger.success(f"Successfully exploited app at {TARGET_IP}:{legitimate_port}")
+        # logger.success(f"{successful_exploits=}")
+        logger.info(f"{successful_exploits=}, {unsuccessful_exploits=}")
+        sleep(1)
 
 
 def main():
