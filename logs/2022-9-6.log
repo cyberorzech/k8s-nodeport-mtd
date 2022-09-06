@@ -2550,3 +2550,276 @@
 [32m2022-09-06 20:52:23.143[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
 [32m2022-09-06 20:52:23.143[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
 [32m2022-09-06 20:52:23.149[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:53:23.292[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:53:23.303[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:53:23.315[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:53:23.324[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:53:23.334[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:53:23.335[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-09-06 20:53:23.344[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:53:23.350[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:53:23.355[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:53:23.360[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:53:23.365[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:53:23.366[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:53:23.369[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:54:23.512[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:54:23.526[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:54:23.537[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:54:23.558[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:54:23.569[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:54:23.570[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-06 20:54:23.577[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:54:23.586[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:54:23.591[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:54:23.595[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:54:23.599[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:54:23.599[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:54:23.603[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:55:23.738[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:55:23.749[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:55:23.760[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:55:23.775[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:55:23.784[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:55:23.784[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service3 NodePort now[0m
+[32m2022-09-06 20:55:23.798[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:55:23.804[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:55:23.810[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:55:23.815[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:55:23.820[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:55:23.820[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:55:23.823[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:56:23.953[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:56:23.966[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:56:23.979[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:56:23.991[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:56:24.003[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:56:24.004[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 20:56:24.012[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:56:24.020[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:56:24.026[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:56:24.033[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:56:24.039[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:56:24.039[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:56:24.043[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:57:24.212[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:57:24.227[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:57:24.236[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:57:24.244[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:57:24.265[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:57:24.265[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-06 20:57:24.270[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:57:24.274[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:57:24.279[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:57:24.285[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:57:24.292[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:57:24.292[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:57:24.297[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:58:24.438[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:58:24.450[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:58:24.458[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:58:24.466[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:58:24.473[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:58:24.473[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 20:58:24.479[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:58:24.486[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:58:24.493[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:58:24.499[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:58:24.504[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:58:24.505[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:58:24.509[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 20:59:24.653[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 20:59:24.665[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 20:59:24.678[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 20:59:24.692[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 20:59:24.710[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 20:59:24.712[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-06 20:59:24.722[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:59:24.728[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:59:24.733[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:59:24.738[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:59:24.742[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 20:59:24.743[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 20:59:24.748[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:00:24.928[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:00:24.940[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:00:24.952[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:00:24.964[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:00:24.975[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:00:24.976[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 21:00:24.984[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:00:24.992[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:00:24.997[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:00:25.003[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:00:25.009[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:00:25.009[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:00:25.013[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:01:25.181[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:01:25.193[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:01:25.202[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:01:25.210[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:01:25.221[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:01:25.221[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-06 21:01:25.228[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:01:25.233[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:01:25.237[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:01:25.244[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:01:25.249[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:01:25.249[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:01:25.252[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:02:25.421[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:02:25.437[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:02:25.444[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:02:25.454[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:02:25.463[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:02:25.464[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-06 21:02:25.478[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:02:25.484[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:02:25.488[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:02:25.495[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:02:25.504[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:02:25.504[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:02:25.508[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:03:25.639[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:03:25.651[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:03:25.662[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:03:25.674[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:03:25.685[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:03:25.685[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-06 21:03:25.696[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:03:25.706[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:03:25.715[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:03:25.723[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:03:25.732[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:03:25.733[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:03:25.737[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:04:25.912[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:04:25.924[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:04:25.937[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:04:25.950[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:04:25.963[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:04:25.963[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 21:04:25.971[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:04:25.979[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:04:25.985[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:04:25.991[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:04:25.997[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:04:25.998[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:04:26.002[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:05:26.169[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:05:26.182[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:05:26.194[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:05:26.205[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:05:26.215[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:05:26.216[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-09-06 21:05:26.223[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:05:26.231[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:05:26.236[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:05:26.243[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:05:26.248[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:05:26.249[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:05:26.253[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:06:26.378[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:06:26.390[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:06:26.402[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:06:26.414[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:06:26.425[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:06:26.426[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-09-06 21:06:26.435[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:06:26.444[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:06:26.453[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:06:26.462[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:06:26.471[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:06:26.472[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:06:26.478[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:07:26.623[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:07:26.634[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:07:26.648[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:07:26.655[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:07:26.661[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:07:26.662[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-06 21:07:26.667[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:07:26.671[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:07:26.676[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:07:26.681[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:07:26.687[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:07:26.688[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:07:26.691[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:08:26.860[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:08:26.871[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:08:26.881[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:08:26.894[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:08:26.904[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:08:26.905[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 21:08:26.912[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:08:26.917[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:08:26.922[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:08:26.927[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:08:26.932[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:08:26.933[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:08:26.936[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:09:27.079[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:09:27.087[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:09:27.094[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:09:27.105[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:09:27.114[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:09:27.115[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-06 21:09:27.126[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:09:27.133[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:09:27.138[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:09:27.143[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:09:27.147[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:09:27.147[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:09:27.150[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:10:27.310[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:10:27.323[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:10:27.333[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:10:27.338[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:10:27.343[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:10:27.343[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-06 21:10:27.349[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:10:27.359[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:10:27.366[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:10:27.371[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:10:27.376[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:10:27.377[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:10:27.379[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:11:27.530[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:11:27.539[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:11:27.547[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:11:27.555[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:11:27.564[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:11:27.564[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-06 21:11:27.570[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:11:27.576[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:11:27.582[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:11:27.588[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:11:27.593[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:11:27.594[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:11:27.597[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:12:27.760[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:12:27.770[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:12:27.779[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:12:27.790[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:12:27.799[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:12:27.800[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 21:12:27.805[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:12:27.809[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:12:27.814[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:12:27.819[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:12:27.823[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:12:27.824[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:12:27.827[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m
+[32m2022-09-06 21:13:27.990[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-06 21:13:28.002[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-06 21:13:28.013[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-06 21:13:28.026[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-06 21:13:28.037[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-06 21:13:28.037[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-06 21:13:28.046[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:13:28.054[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:13:28.061[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:13:28.069[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:13:28.076[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-06 21:13:28.077[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-06 21:13:28.082[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate_state[0m:[36m25[0m - [32m[1mState updated[0m

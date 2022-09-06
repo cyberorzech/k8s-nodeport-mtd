@@ -146,8 +146,6 @@ def main():
         else:
             scenario_2(reactive_behavior=True)
 
-    # print(args.scenario)
-
 
 def get_args():
     parser = argparse.ArgumentParser()
