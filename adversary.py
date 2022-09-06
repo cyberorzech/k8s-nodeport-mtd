@@ -149,7 +149,7 @@ def main():
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--scenario", default=1, choices=[1, 2])
+    parser.add_argument("-s", "--scenario", default="1", choices=["1", "2"])
     parser.add_argument(
         "-t", "--type", default="proactive", choices=["proactive", "mixed", "reactive"]
     )
