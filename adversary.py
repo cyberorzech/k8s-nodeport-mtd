@@ -18,13 +18,17 @@ HIGHEST_NODE_PORT = config["HIGHEST_NODE_PORT"]
 
 
 @logger.catch
-def perform_port_scan(target_ip: str, reactive_behavior=False, detection_probability=0.0) -> list:
+def perform_port_scan(
+    target_ip: str, reactive_behavior=False, detection_probability=0.0
+) -> list:
     """
     Function that performs nmap scan and open ports extraction. If scan is detected, it is performed anyway.
     """
     try:
         if detection_probability == 0 and reactive_behavior:
-            raise ValueError(f"In order to choose reactive behavior, detection probability (P2 in config file) must be gt 0")
+            raise ValueError(
+                f"In order to choose reactive behavior, detection probability (P2 in config file) must be gt 0"
+            )
     except ValueError as ve:
         logger.error(ve)
         exit(1)
@@ -119,9 +123,9 @@ def scenario_2(reactive_behavior=False):
         logger.info(f"{successful_exploits=}, {unsuccessful_exploits=}")
         sleep(1)
 
+
 @logger.catch
 def main():
-    # scenario_2()
     args = get_args()
     if args.type == "proactive":
         if args.scenario == 1:
@@ -129,19 +133,28 @@ def main():
         else:
             scenario_2()
     elif args.type == "mixed":
-        pass
+        if args.scenario == 1:
+            scenario_1(reactive_behavior=True)
+        else:
+            scenario_2(reactive_behavior=True)
     elif args.type == "reactive":
-        pass
-    
-    
-    
-    #print(args.scenario)
+        logger.warning(
+            f"Reactive mode. Make sure update_state script is not running. Update will be performed automatically only if port scan is detected."
+        )
+        if args.scenario == 1:
+            scenario_1(reactive_behavior=True)
+        else:
+            scenario_2(reactive_behavior=True)
+
+    # print(args.scenario)
 
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--scenario", default=1, choices=[1, 2])
-    parser.add_argument("-t", "--type", default="proactive", choices=["proactive", "mixed", "reactive"])
+    parser.add_argument(
+        "-t", "--type", default="proactive", choices=["proactive", "mixed", "reactive"]
+    )
     args = parser.parse_args()
     return args
 
