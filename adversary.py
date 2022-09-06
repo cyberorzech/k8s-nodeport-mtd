@@ -6,6 +6,7 @@ from time import sleep
 
 from mtd_sources.logger import initialize
 from mtd_sources.config import get_config
+from mtd_sources.probability import draw
 
 config = get_config("./config.yaml")
 TARGET_IP = config["MASTER_NODE_IP"]
@@ -47,8 +48,12 @@ def find_legitimate_app(target_ip: str, open_ports: list):
 
 @logger.catch
 def exploit():
-    exploit_time = config["EXPLOIT_TIME"]
-    sleep(exploit_time)
+    while True:
+        exploit_time = config["EXPLOIT_TIME"]
+        sleep(exploit_time)
+        probability_of_success = get_config("config.yaml")["P1"]
+        if draw(probability=probability_of_success):
+            break
 
 
 @logger.catch
