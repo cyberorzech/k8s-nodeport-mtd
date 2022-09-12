@@ -14,7 +14,6 @@ CONFIG_PATH = "./config.yaml"
 
 @logger.catch
 def update_state(once=False):
-    sleep(30)
     config = get_config(CONFIG_PATH)
     INTERVAL = config["STATE_UPDATE_INTERVAL"]  # [s]
     APP_RECONFIGURATOR_URL = config["APP_RECONFIGURATOR_URL"]
