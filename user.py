@@ -1,6 +1,7 @@
 import argparse
 from loguru import logger
 from requests import get
+from requests.exceptions import InvalidURL
 from time import sleep, perf_counter
 
 from mtd_sources.config import get_config
@@ -62,9 +63,11 @@ def measure_uptime():
                 )
         except TypeError as te:
             logger.error(te)
-        
-        response = get(f"http://{NODE_IP}:{service_port}").text
-        
+        try:
+            response = get(f"http://{NODE_IP}:{service_port}").text
+        except InvalidURL:
+            continue
+
         
         
         if LEGIT_APP_MESSAGE in response:
@@ -74,7 +77,7 @@ def measure_uptime():
             end_time = perf_counter()
             downtime += end_time - start_time
         loop_count += 1
-        if loop_count % 500 == 0:
+        if loop_count % 300 == 0:
             logger.success(f"Uptime: {round(uptime, 2)}[s], Downtime: {round(downtime, 2)}[s]")
             loop_count = 0
         
