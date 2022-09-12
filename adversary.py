@@ -54,7 +54,6 @@ def perform_port_scan(
     if reactive_behavior and draw(probability=detection_probability):
         logger.warning("Scan has been detected")
         Thread(target=update_state, args=([True])).start()
-    logger.warning("gasdasdasdasdas")
     return open_ports
 
 
