@@ -6,6 +6,7 @@ from subprocess import check_output
 from requests import get
 from requests.exceptions import ConnectTimeout
 from time import sleep
+from threading import Thread
 
 from mtd_sources.logger import initialize
 from mtd_sources.config import get_config
@@ -52,7 +53,7 @@ def perform_port_scan(
     open_ports = [int(el) for el in open_ports]
     if reactive_behavior and draw(probability=detection_probability):
         logger.warning("Scan has been detected")
-        update_state(once=True)
+        Thread(target=update_state(once=True))
     return open_ports
 
 
