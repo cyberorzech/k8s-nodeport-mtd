@@ -66,7 +66,7 @@ def find_legitimate_app(target_ip: str, open_ports: list):
             if "legitimate" in response:
                 legitimate_port = port
                 return True, legitimate_port
-        except ValueError:
+        except (ValueError, TypeError):
             return False, None
     return False, None
 
@@ -125,9 +125,14 @@ def scenario_1(reactive_behavior=False):
 def scenario_2(reactive_behavior=False):
     successful_exploits = 0
     unsuccessful_exploits = 0
+    detection_probability = get_config("config.yaml")["P2"]
     while True:
         logger.info(f"Target IP is set to {TARGET_IP}")
-        open_ports = perform_port_scan(TARGET_IP)
+        open_ports = perform_port_scan(
+            TARGET_IP,
+            reactive_behavior=reactive_behavior,
+            detection_probability=detection_probability,
+        )
         logger.info(f"Open ports are: {open_ports}")
         try:
             legit_app_found, legitimate_port = find_legitimate_app(
