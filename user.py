@@ -1,6 +1,7 @@
 import argparse
 from loguru import logger
 from requests import get
+from requests.exceptions import InvalidURL
 from time import sleep, perf_counter
 
 from mtd_sources.config import get_config
@@ -29,7 +30,6 @@ def user():
         except TypeError as te:
             logger.error(te)
 
-
         response = get(f"http://{NODE_IP}:{service_port}").text
         if LEGIT_APP_MESSAGE in response:
             successful_requests += 1
@@ -40,18 +40,16 @@ def user():
         sleep(config["USER_INTERVAL"])
 
 
-
-
 @logger.catch
 def measure_uptime():
-    config = get_config(CONFIG_PATH) 
+    config = get_config(CONFIG_PATH)
     NODE_IP = config["MASTER_NODE_IP"]
     downtime = 0
     uptime = 0
     loop_count = 0
     state_repo_url = config["STATE_REPOSITORY_URL"]
 
-    while(True):
+    while True:
         start_time = perf_counter()
         response = get(f"{state_repo_url}?service_name={SERVICE_NAME}")
         try:
@@ -62,11 +60,11 @@ def measure_uptime():
                 )
         except TypeError as te:
             logger.error(te)
-        
-        response = get(f"http://{NODE_IP}:{service_port}").text
-        
-        
-        
+        try:
+            response = get(f"http://{NODE_IP}:{service_port}").text
+        except InvalidURL:
+            continue
+
         if LEGIT_APP_MESSAGE in response:
             end_time = perf_counter()
             uptime += end_time - start_time
@@ -74,17 +72,23 @@ def measure_uptime():
             end_time = perf_counter()
             downtime += end_time - start_time
         loop_count += 1
-        if loop_count % 500 == 0:
-            logger.success(f"Uptime: {round(uptime, 2)}[s], Downtime: {round(downtime, 2)}[s]")
+        if loop_count % 300 == 0:
+            logger.success(
+                f"Uptime: {round(uptime, 2)}[s], Downtime: {round(downtime, 2)}[s]"
+            )
             loop_count = 0
-        
+
+
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mode", default="uptime", choices=["user", "uptime"])
     args = parser.parse_args()
     return args
 
+
 if __name__ == "__main__":
     args = get_args()
-    if args.mode == "user": user()
-    else: measure_uptime()
+    if args.mode == "user":
+        user()
+    else:
+        measure_uptime()

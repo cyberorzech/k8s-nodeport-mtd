@@ -1,0 +1,253 @@
+[32m2022-09-09 09:48:52.306[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mrun[0m:[36m19[0m - [33m[1meldo[0m
+[32m2022-09-09 09:53:12.246[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 09:53:12.257[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 09:53:12.268[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 09:53:12.279[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 09:53:12.287[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 09:53:12.287[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-09-09 09:53:12.294[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:12.302[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:12.308[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:12.314[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:12.321[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:12.321[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 09:53:44.697[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 09:53:44.711[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 09:53:44.719[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 09:53:44.727[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 09:53:44.737[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 09:53:44.738[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service1 NodePort now[0m
+[32m2022-09-09 09:53:44.744[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:44.751[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:44.756[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:44.763[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:44.770[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:53:44.770[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 09:57:15.321[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mrun[0m:[36m23[0m - [31m[1mAn error has been caught in function 'run', process 'MainProcess' (121659), thread 'MainThread' (140361182541632):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mspotkanie.py[0m", line [33m32[0m, in [35m<module>[0m
+    [1mrun[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function run at 0x7fa8611c4ee0>[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mspotkanie.py[0m", line [33m23[0m, in [35mrun[0m
+    [1mk8s[0m[35m[1m.[0m[1mcheck_resource_existence[0m[1m([0m[1m)[0m
+    [36m│   └ [0m[36m[1m<function K8s.check_resource_existence at 0x7fa85ff59cf0>[0m
+    [36m└ [0m[36m[1m<mtd_sources.k8s_client.K8s object at 0x7fa85ff43760>[0m
+
+[31m[1mTypeError[0m:[1m K8s.check_resource_existence() missing 2 required positional arguments: 'resource_name' and 'resource_type'[0m
+[32m2022-09-09 09:57:15.435[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 09:57:15.448[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 09:57:15.455[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 09:57:15.465[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 09:57:15.477[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 09:57:15.478[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-09 09:57:15.483[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:57:15.488[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:57:15.493[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:57:15.498[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:57:15.503[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 09:57:15.503[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 09:57:15.506[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m27[0m - [32m[1mApp is deployed at 31776[0m
+[32m2022-09-09 10:02:44.568[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 10:02:44.577[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 10:02:44.586[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 10:02:44.596[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 10:02:44.608[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 10:02:44.609[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service5 NodePort now[0m
+[32m2022-09-09 10:02:44.618[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:02:44.624[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:02:44.629[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:02:44.634[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:02:44.638[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:02:44.638[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 10:02:44.640[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m32[0m - [32m[1mApp is deployed at 32385[0m
+[32m2022-09-09 10:12:53.825[0m | [1mINFO    [0m | [36m__main__[0m:[36mdeploy_app[0m:[36m22[0m - [1mDeploying app...[0m
+[32m2022-09-09 10:12:55.943[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 10:12:55.952[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 10:12:55.960[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 10:12:55.971[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 10:12:55.984[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 10:12:55.985[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service4 NodePort now[0m
+[32m2022-09-09 10:12:55.990[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:12:56.004[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:12:56.010[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:12:56.016[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:12:56.020[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 10:12:56.020[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 10:12:56.023[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m46[0m - [32m[1mApp is deployed at 31776[0m
+[32m2022-09-09 10:12:56.024[0m | [1mINFO    [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m26[0m - [1mPerforming caldera attack at 10.2.255.1:31776[0m
+[32m2022-09-09 10:13:01.070[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m31[0m - [32m[1mAttack status is: done[0m
+[32m2022-09-09 10:13:01.071[0m | [1mINFO    [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m32[0m - [1mResults exported to res.json[0m
+[32m2022-09-09 12:24:14.432[0m | [1mINFO    [0m | [36m__main__[0m:[36mdeploy_app[0m:[36m18[0m - [1mDeploying app...[0m
+[32m2022-09-09 12:24:16.479[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36m<module>[0m:[36m48[0m - [31m[1mAn error has been caught in function '<module>', process 'MainProcess' (10549), thread 'MainThread' (140109476546368):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           │          └ <function create_connection at 0x7f6dc7131480>
+           └ <module 'urllib3.util.connection' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection....
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+          └ ConnectionRefusedError(111, 'Connection refused')
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+    │            └ ('127.0.0.1', 5100)
+    └ None
+
+[31m[1mConnectionRefusedError[0m:[1m [Errno 111] Connection refused[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       │    └ <function HTTPConnectionPool._make_request at 0x7f6dc6a735b0>
+                       └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f6dc519d600>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+    │    │       │       │      └ {'body': None, 'headers': {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Conn...
+    │    │       │       └ '/update'
+    │    │       └ 'GET'
+    │    └ <function HTTPConnection.request at 0x7f6dc6a49bd0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+          │               │             │       │         │             └ {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+          │               │             │       │         └ None
+          │               │             │       └ '/update'
+          │               │             └ 'GET'
+          │               └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+          └ <class 'urllib3.connection.HTTPConnection'>
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    │    │             │       │    │     │        └ False
+    │    │             │       │    │     └ {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+    │    │             │       │    └ None
+    │    │             │       └ '/update'
+    │    │             └ 'GET'
+    │    └ <function HTTPConnection._send_request at 0x7f6dc70bde10>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    │    │          │                    └ False
+    │    │          └ None
+    │    └ <function HTTPConnection.endheaders at 0x7f6dc70bdcf0>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    │    │            │                            └ False
+    │    │            └ None
+    │    └ <function HTTPConnection._send_output at 0x7f6dc70bd900>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+    │    │    └ b'GET /update HTTP/1.1\r\nHost: localhost:5100\r\nUser-Agent: python-requests/2.28.1\r\nAccept-Encoding: gzip, deflate\r\nAcc...
+    │    └ <function HTTPConnection.send at 0x7f6dc70bd750>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+    │    └ <function HTTPConnection.connect at 0x7f6dc6a49a20>
+    └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+           │    └ <function HTTPConnection._new_conn at 0x7f6dc6a49870>
+           └ <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+          └ <class 'urllib3.exceptions.NewConnectionError'>
+
+[31m[1murllib3.exceptions.NewConnectionError[0m:[1m <urllib3.connection.HTTPConnection object at 0x7f6dc519db10>: Failed to establish a new connection: [Errno 111] Connection refused[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+           │    └ <function HTTPConnectionPool.urlopen at 0x7f6dc6a737f0>
+           └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f6dc519d600>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              │       └ <function Retry.increment at 0x7f6dc7133130>
+              └ Retry(total=0, connect=None, read=False, redirect=None, status=None)
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+          │             │      │    │        │             └ 'unknown'
+          │             │      │    │        └ <class 'urllib3.exceptions.ResponseError'>
+          │             │      │    └ NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6dc519db10>: Failed to establish a new connection: [Errn...
+          │             │      └ '/update'
+          │             └ <urllib3.connectionpool.HTTPConnectionPool object at 0x7f6dc519d600>
+          └ <class 'urllib3.exceptions.MaxRetryError'>
+
+[31m[1murllib3.exceptions.MaxRetryError[0m:[1m HTTPConnectionPool(host='localhost', port=5100): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6dc519db10>: Failed to establish a new connection: [Errno 111] Connection refused'))[0m
+
+
+[1mDuring handling of the above exception, another exception occurred:[0m
+
+
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mspotkanie.py[0m", line [33m48[0m, in [35m<module>[0m
+    [1mrun[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function run at 0x7f6dc518b0a0>[0m
+
+  File "[32m/home/gr/k8s-nodeport-mtd/[0m[32m[1mspotkanie.py[0m", line [33m39[0m, in [35mrun[0m
+    [1mres[0m [35m[1m=[0m [1mrequests[0m[35m[1m.[0m[1mget[0m[1m([0m[1mURL[0m[1m,[0m [1mtimeout[0m[35m[1m=[0m[34m[1m10[0m[1m)[0m
+    [36m      │        │   └ [0m[36m[1m'http://localhost:5100/update'[0m
+    [36m      │        └ [0m[36m[1m<function get at 0x7f6dc6813130>[0m
+    [36m      └ [0m[36m[1m<module 'requests' from '/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/__init__.py'>[0m
+
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           │              │           │         └ {'timeout': 10}
+           │              │           └ None
+           │              └ 'http://localhost:5100/update'
+           └ <function request at 0x7f6dc67d55a0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None, 'timeout': 10}
+           │       │              │           └ 'http://localhost:5100/update'
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x7f6dc68128c0>
+           └ <requests.sessions.Session object at 0x7f6dc662d870>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+           │    │    │       └ {'timeout': 10, 'allow_redirects': True, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+           │    │    └ <PreparedRequest [GET]>
+           │    └ <function Session.send at 0x7f6dc6812d40>
+           └ <requests.sessions.Session object at 0x7f6dc662d870>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+        │       │    │          └ {'timeout': 10, 'proxies': OrderedDict(), 'stream': False, 'verify': True, 'cert': None}
+        │       │    └ <PreparedRequest [GET]>
+        │       └ <function HTTPAdapter.send at 0x7f6dc6812200>
+        └ <requests.adapters.HTTPAdapter object at 0x7f6dc51677f0>
+  File "/home/gr/k8s-nodeport-mtd/.venv/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+          │                          └ <PreparedRequest [GET]>
+          └ <class 'requests.exceptions.ConnectionError'>
+
+[31m[1mrequests.exceptions.ConnectionError[0m:[1m HTTPConnectionPool(host='localhost', port=5100): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6dc519db10>: Failed to establish a new connection: [Errno 111] Connection refused'))[0m
+[32m2022-09-09 12:24:51.802[0m | [1mINFO    [0m | [36m__main__[0m:[36mdeploy_app[0m:[36m18[0m - [1mDeploying app...[0m
+[32m2022-09-09 12:24:53.993[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service1[0m
+[32m2022-09-09 12:24:54.006[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service2[0m
+[32m2022-09-09 12:24:54.015[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service3[0m
+[32m2022-09-09 12:24:54.025[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service4[0m
+[32m2022-09-09 12:24:54.032[0m | [1mINFO    [0m | [36m__main__[0m:[36mupdate[0m:[36m39[0m - [1mPatched app-service5[0m
+[32m2022-09-09 12:24:54.032[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m40[0m - [32m[1mAll services patched. Legit app is exposed on app-service2 NodePort now[0m
+[32m2022-09-09 12:24:54.039[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 12:24:54.044[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 12:24:54.050[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 12:24:54.056[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 12:24:54.061[0m | [1mINFO    [0m | [36mmtd_sources.k8s_client[0m:[36mget_nodeport[0m:[36m34[0m - [1mThis method returns only first node port (assuming only one nodeport)[0m
+[32m2022-09-09 12:24:54.061[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mupdate[0m:[36m48[0m - [32m[1m{'app-service1': 32186, 'app-service2': 31827, 'app-service3': 32707, 'app-service4': 31776, 'app-service5': 32385}[0m
+[32m2022-09-09 12:24:54.063[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mrun[0m:[36m42[0m - [32m[1mApp is deployed at 31827[0m
+[32m2022-09-09 12:24:54.063[0m | [1mINFO    [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m22[0m - [1mPerforming caldera attack at 10.2.255.1:31827[0m
+[32m2022-09-09 12:24:59.103[0m | [32m[1mSUCCESS [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m27[0m - [32m[1mAttack status is: done[0m
+[32m2022-09-09 12:24:59.104[0m | [1mINFO    [0m | [36m__main__[0m:[36mcaldera_attack[0m:[36m30[0m - [1mResults exported to res.json[0m

@@ -4,7 +4,9 @@ from sys import exit
 from loguru import logger
 from subprocess import check_output
 from requests import get
+from requests.exceptions import ConnectTimeout
 from time import sleep
+from threading import Thread
 
 from mtd_sources.logger import initialize
 from mtd_sources.config import get_config
@@ -33,7 +35,7 @@ def perform_port_scan(
         logger.error(ve)
         exit(1)
 
-    command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} "
+    command = f"nmap -p {LOWEST_NODE_PORT}-{HIGHEST_NODE_PORT} {target_ip} -T5 "
     command += "| grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
     try:
         if os.name != "posix":
@@ -50,7 +52,8 @@ def perform_port_scan(
     ]  # last element is dropped because it is empty (contains no port number)
     open_ports = [int(el) for el in open_ports]
     if reactive_behavior and draw(probability=detection_probability):
-        update_state(once=True)
+        logger.warning("Scan has been detected")
+        Thread(target=update_state, args=([True])).start()
     return open_ports
 
 
@@ -59,9 +62,12 @@ def find_legitimate_app(target_ip: str, open_ports: list):
     legitimate_port = None
     for port in open_ports:
         response = send_request(target_ip, port)
-        if "legitimate" in response:
-            legitimate_port = port
-            return True, legitimate_port
+        try:
+            if "legitimate" in response:
+                legitimate_port = port
+                return True, legitimate_port
+        except (ValueError, TypeError):
+            return False, None
     return False, None
 
 
@@ -80,18 +86,27 @@ def send_request(target_ip: str, port: str):
     """
     Function sends GET method to K8s based service and parse response
     """
-    url = f"http://{target_ip}:{port}"
-    res = get(url).text
+    try:
+        url = f"http://{target_ip}:{port}"
+        res = get(url, timeout=5).text
+    except ConnectTimeout as ct:
+        logger.warning(ct)
+        return
     return res
 
 
 @logger.catch
 def scenario_1(reactive_behavior=False):
+    detection_probability = get_config("./config.yaml")["P2"]
     successful_exploits = 0
     unsuccessful_exploits = 0
     while True:
         logger.info(f"Target IP is set to {TARGET_IP}")
-        open_ports = perform_port_scan(TARGET_IP)
+        open_ports = perform_port_scan(
+            TARGET_IP,
+            reactive_behavior=reactive_behavior,
+            detection_probability=detection_probability,
+        )
         logger.info(f"Open ports are: {open_ports}")
         # For every port: exploit and check if the service is legitimate
         for port in open_ports:
@@ -110,11 +125,22 @@ def scenario_1(reactive_behavior=False):
 def scenario_2(reactive_behavior=False):
     successful_exploits = 0
     unsuccessful_exploits = 0
+    detection_probability = get_config("config.yaml")["P2"]
     while True:
         logger.info(f"Target IP is set to {TARGET_IP}")
-        open_ports = perform_port_scan(TARGET_IP)
+        open_ports = perform_port_scan(
+            TARGET_IP,
+            reactive_behavior=reactive_behavior,
+            detection_probability=detection_probability,
+        )
         logger.info(f"Open ports are: {open_ports}")
-        legit_app_found, legitimate_port = find_legitimate_app(TARGET_IP, open_ports)
+        try:
+            legit_app_found, legitimate_port = find_legitimate_app(
+                TARGET_IP, open_ports
+            )
+        except TypeError:
+            # unsuccessful raise TODO
+            pass
         if legit_app_found:
             logger.success(f"Legitimate app found at {legitimate_port}")
             successful_exploits += 1
@@ -128,28 +154,34 @@ def scenario_2(reactive_behavior=False):
 def main():
     args = get_args()
     if args.type == "proactive":
-        if args.scenario == 1:
+        if args.scenario == "1":
             scenario_1()
-        else:
+        elif args.scenario == "2":
             scenario_2()
-    elif args.type == "mixed":
-        if args.scenario == 1:
-            scenario_1(reactive_behavior=True)
         else:
+            raise ValueError()
+    elif args.type == "mixed":
+        if args.scenario == "1":
+            scenario_1(reactive_behavior=True)
+        elif args.scenario == "2":
             scenario_2(reactive_behavior=True)
+        else:
+            raise ValueError()
     elif args.type == "reactive":
         logger.warning(
             f"Reactive mode. Make sure update_state script is not running. Update will be performed automatically only if port scan is detected."
         )
-        if args.scenario == 1:
+        if args.scenario == "1":
             scenario_1(reactive_behavior=True)
-        else:
+        elif args.scenario == "2":
             scenario_2(reactive_behavior=True)
+        else:
+            raise ValueError()
 
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--scenario", default=1, choices=[1, 2])
+    parser.add_argument("-s", "--scenario", default="1", choices=["1", "2"])
     parser.add_argument(
         "-t", "--type", default="proactive", choices=["proactive", "mixed", "reactive"]
     )
