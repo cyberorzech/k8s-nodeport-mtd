@@ -1,0 +1,52 @@
+[32m2022-09-28 18:45:12.760[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_1[0m:[36m104[0m - [1mTarget IP is set to 10.2.255.1[0m
+[32m2022-09-28 18:45:14.328[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mscenario_1[0m:[36m105[0m - [31m[1mAn error has been caught in function 'scenario_1', process 'MainProcess' (395218), thread 'MainThread' (140289480546112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m194[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f97af3dc310>[0m
+
+  File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m158[0m, in [35mmain[0m
+    [1mscenario_1[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function scenario_1 at 0x7f97af3dbc10>[0m
+
+> File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m105[0m, in [35mscenario_1[0m
+    [1mopen_ports[0m [35m[1m=[0m [1mperform_port_scan[0m[1m([0m
+    [36m             └ [0m[36m[1m<function perform_port_scan at 0x7f97af3c9e50>[0m
+
+  File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m48[0m, in [35mperform_port_scan[0m
+    [1mbash_output[0m [35m[1m=[0m [1mcheck_output[0m[1m([0m[1mcommand[0m[1m,[0m [1mshell[0m[35m[1m=[0m[36m[1mTrue[0m[1m)[0m
+    [36m              │            └ [0m[36m[1m"nmap -p 30000-32767 10.2.255.1 -T5 | grep open | awk '{print $1}' | grep -Eo '[0-9]*'"[0m
+    [36m              └ [0m[36m[1m<function check_output at 0x7f97b02dd280>[0m
+
+  File "/usr/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           │    │                 │             └ None
+           │    │                 └ -1
+           │    └ ("nmap -p 30000-32767 10.2.255.1 -T5 | grep open | awk '{print $1}' | grep -Eo '[0-9]*'",)
+           └ <function run at 0x7f97b02dd310>
+  File "/usr/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+          │                  │        │       └ "nmap -p 30000-32767 10.2.255.1 -T5 | grep open | awk '{print $1}' | grep -Eo '[0-9]*'"
+          │                  │        └ <Popen: returncode: 1 args: "nmap -p 30000-32767 10.2.255.1 -T5 | grep open ...>
+          │                  └ 1
+          └ <class 'subprocess.CalledProcessError'>
+
+[31m[1msubprocess.CalledProcessError[0m:[1m Command 'nmap -p 30000-32767 10.2.255.1 -T5 | grep open | awk '{print $1}' | grep -Eo '[0-9]*'' returned non-zero exit status 1.[0m
+[32m2022-09-28 18:45:14.336[0m | [1mINFO    [0m | [36m__main__[0m:[36mscenario_1[0m:[36m110[0m - [1mOpen ports are: None[0m
+[32m2022-09-28 18:45:14.336[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mmain[0m:[36m158[0m - [31m[1mAn error has been caught in function 'main', process 'MainProcess' (395218), thread 'MainThread' (140289480546112):[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m194[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function main at 0x7f97af3dc310>[0m
+
+> File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m158[0m, in [35mmain[0m
+    [1mscenario_1[0m[1m([0m[1m)[0m
+    [36m└ [0m[36m[1m<function scenario_1 at 0x7f97af3dbc10>[0m
+
+  File "[32m/home/kali/k8s-nodeport-mtd/[0m[32m[1madversary.py[0m", line [33m112[0m, in [35mscenario_1[0m
+    [35m[1mfor[0m [1mport[0m [35m[1min[0m [1mopen_ports[0m[1m:[0m
+    [36m            └ [0m[36m[1mNone[0m
+
+[31m[1mTypeError[0m:[1m 'NoneType' object is not iterable[0m
